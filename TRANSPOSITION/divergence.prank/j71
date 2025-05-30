@@ -1,0 +1,4 @@
+#!/bin/bash
+/home/knam/save/programs/prank/bin/prank -d=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/beforealign/FC_104.XP_050560972.fa -o=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/afteralign/FC_104.XP_050560972 -codon
+/home/knam/save/programs/prank/bin/prank -d=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/beforealign/FC55.XP_035442543.fa -o=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/afteralign/FC55.XP_035442543 -codon
+/home/knam/save/programs/prank/bin/prank -d=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/beforealign/FC_88.XP_050561584.fa -o=/home/knam/work/sfrugi_WG/TRANSPOSITION/divergence/afteralign/FC_88.XP_050561584 -codon

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+zcat /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/seq/assembly/FC32.fa.gz > /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa
+
+/home/knam/save/programs/gffread/gffread /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/gff/FC32.gff -g /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa -x /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/FC32.cds.fa
+
+rm /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa*
+

@@ -1,0 +1,2520 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007eff406b8c73, pid=12484, tid=0x00007effc5f60700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_262-b10) (build 1.8.0_262-b10)
+# Java VM: OpenJDK 64-Bit Server VM (25.262-b10 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libgkl_pairhmm_omp60163064984343739.so+0x18c73]  double compute_full_prob_avxd<double>(testcase*)+0x333
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007effbc04c800):  JavaThread "main" [_thread_in_native, id=12489, stack(0x00007effc5e61000,0x00007effc5f61000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 2 (SEGV_ACCERR), si_addr: 0x00007effc5e60000
+
+Registers:
+RAX=0x00000000000005d9, RBX=0x00007effc5e8aa80, RCX=0x0000000000000d95, RDX=0x00007effc5e60000
+RSP=0x00007effc5e522e0, RBP=0x00007effc5f5ee10, RSI=0x0000000000003656, RDI=0x0000000000000000
+R8 =0x00000000000034c4, R9 =0x0000000000000001, R10=0x000000000000018c, R11=0x00007effbc578c80
+R12=0x00007effc5e6f7c0, R13=0x00007effc5e54500, R14=0x000000000001b2b0, R15=0x0000000000003656
+RIP=0x00007eff406b8c73, EFLAGS=0x0000000000010202, CSGSFS=0x3030000000000033, ERR=0x0000000000000006
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007effc5e522e0)
+0x00007effc5e522e0:   0114041100080224 260a0b2caa406109
+0x00007effc5e522f0:   0020200004130c00 d8c1d0c251a490d2
+0x00007effc5e52300:   ffffffffffffffff 0281061010184000
+0x00007effc5e52310:   804c81072804218e 5110008001801c71
+0x00007effc5e52320:   2c227868c6638200 ffffffffffffffff
+0x00007effc5e52330:   602092a8d05028bc 10d86c4000001442
+0x00007effc5e52340:   8e070016078dc100 0100010128220201
+0x00007effc5e52350:   ffffffffffffffff bd28040416094011
+0x00007effc5e52360:   005510a200820144 0080a20941201408
+0x00007effc5e52370:   42024950a854aaa2 ffffffffffffffff
+0x00007effc5e52380:   0040140012800004 409002bb0812025a
+0x00007effc5e52390:   3b0be90461644001 842400408409bda0
+0x00007effc5e523a0:   ffffffffffffffff 8c44706080080008
+0x00007effc5e523b0:   20110a8a2281cea2 010a00004d561045
+0x00007effc5e523c0:   52a0851510202110 ffffffffffffffff
+0x00007effc5e523d0:   0400000000000000 aaa0000000000000
+0x00007effc5e523e0:   4140000000000000 1010000000000000
+0x00007effc5e523f0:   ffffffffffffffff 0000000000000000
+0x00007effc5e52400:   0000000000000000 0000000000000000
+0x00007effc5e52410:   0000000000000000 ffffffffffffffff
+0x00007effc5e52420:   0000000000000000 0000000000000000
+0x00007effc5e52430:   0000000000000000 0000000000000000
+0x00007effc5e52440:   ffffffffffffffff 0000000000000000
+0x00007effc5e52450:   0000000000000000 0000000000000000
+0x00007effc5e52460:   0000000000000000 ffffffffffffffff
+0x00007effc5e52470:   0000000000000000 0000000000000000
+0x00007effc5e52480:   0000000000000000 0000000000000000
+0x00007effc5e52490:   ffffffffffffffff 0000000000000000
+0x00007effc5e524a0:   0000000000000000 0000000000000000
+0x00007effc5e524b0:   0000000000000000 ffffffffffffffff
+0x00007effc5e524c0:   0000000000000000 0000000000000000
+0x00007effc5e524d0:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007eff406b8c73)
+0x00007eff406b8c53:   00 00 c5 fb 12 c3 44 89 fe 49 8d 54 c5 00 29 c6
+0x00007eff406b8c63:   31 c0 89 f1 c4 e3 7d 18 c0 01 c1 e9 02 83 c0 01
+0x00007eff406b8c73:   c5 fd 29 02 48 83 c2 20 39 c8 72 f1 89 f0 83 e0
+0x00007eff406b8c83:   fc 01 c7 39 f0 74 60 48 63 c7 c4 c1 7b 11 5c c5 
+
+Register to memory mapping:
+
+RAX=0x00000000000005d9 is an unknown value
+RBX=0x00007effc5e8aa80 is pointing into the stack for thread: 0x00007effbc04c800
+RCX=0x0000000000000d95 is an unknown value
+RDX=0x00007effc5e60000 is an unknown value
+RSP=0x00007effc5e522e0 is an unknown value
+RBP=0x00007effc5f5ee10 is pointing into the stack for thread: 0x00007effbc04c800
+RSI=0x0000000000003656 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x00000000000034c4 is an unknown value
+R9 =0x0000000000000001 is an unknown value
+R10=0x000000000000018c is an unknown value
+R11=0x00007effbc578c80 is an unknown value
+R12=0x00007effc5e6f7c0 is pointing into the stack for thread: 0x00007effbc04c800
+R13=0x00007effc5e54500 is an unknown value
+R14=0x000000000001b2b0 is an unknown value
+R15=0x0000000000003656 is an unknown value
+
+
+Stack: [0x00007effc5e61000,0x00007effc5f61000],  sp=0x00007effc5e522e0,  free space=18014398509481924k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libgkl_pairhmm_omp60163064984343739.so+0x18c73]  double compute_full_prob_avxd<double>(testcase*)+0x333
+C  [libgkl_pairhmm_omp60163064984343739.so+0x1500f]  Java_com_intel_gkl_pairhmm_IntelPairHmm_computeLikelihoodsNative._omp_fn.0+0xcf
+C  0x00007effbdc4c090
+C  0x00007effbea28e90
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 7120  com.intel.gkl.pairhmm.IntelPairHmm.computeLikelihoodsNative([Ljava/lang/Object;[Ljava/lang/Object;[D)V (0 bytes) @ 0x00007effaddb9e84 [0x00007effaddb9e00+0x84]
+J 9014 C2 org.broadinstitute.hellbender.utils.pairhmm.VectorLoglessPairHMM.computeLog10Likelihoods(Lorg/broadinstitute/hellbender/utils/genotyper/LikelihoodMatrix;Ljava/util/List;Lorg/broadinstitute/hellbender/utils/pairhmm/PairHMMInputScoreImputator;)V (450 bytes) @ 0x00007effae478a70 [0x00007effae478420+0x650]
+J 7818 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.PairHMMLikelihoodCalculationEngine.computeReadLikelihoods(Lorg/broadinstitute/hellbender/utils/genotyper/LikelihoodMatrix;)V (215 bytes) @ 0x00007effade7bef8 [0x00007effade7a380+0x1b78]
+J 8863 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.PairHMMLikelihoodCalculationEngine.computeReadLikelihoods(Lorg/broadinstitute/hellbender/tools/walkers/haplotypecaller/AssemblyResultSet;Lorg/broadinstitute/hellbender/utils/genotyper/SampleList;Ljava/util/Map;)Lorg/broadinstitute/hellbender/utils/genotyper/AlleleLikelihoods; (154 bytes) @ 0x00007effae1b67bc [0x00007effae1b56c0+0x10fc]
+J 8876 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCallerEngine.callRegion(Lorg/broadinstitute/hellbender/engine/AssemblyRegion;Lorg/broadinstitute/hellbender/engine/FeatureContext;Lorg/broadinstitute/hellbender/engine/ReferenceContext;)Ljava/util/List; (2018 bytes) @ 0x00007effae192bc4 [0x00007effae1912e0+0x18e4]
+J 8158 C2 org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller.apply(Lorg/broadinstitute/hellbender/engine/AssemblyRegion;Lorg/broadinstitute/hellbender/engine/ReferenceContext;Lorg/broadinstitute/hellbender/engine/FeatureContext;)V (30 bytes) @ 0x00007effadeda4f4 [0x00007effadeda4a0+0x54]
+J 9159 C1 org.broadinstitute.hellbender.engine.AssemblyRegionWalker.processReadShard(Lorg/broadinstitute/hellbender/engine/MultiIntervalLocalReadShard;Lorg/broadinstitute/hellbender/engine/ReferenceDataSource;Lorg/broadinstitute/hellbender/engine/FeatureManager;)V (182 bytes) @ 0x00007effae236864 [0x00007effae234960+0x1f04]
+j  org.broadinstitute.hellbender.engine.AssemblyRegionWalker.traverse()V+83
+j  org.broadinstitute.hellbender.engine.GATKTool.doWork()Ljava/lang/Object;+12
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.runTool()Ljava/lang/Object;+27
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMainPostParseArgs()Ljava/lang/Object;+238
+j  org.broadinstitute.hellbender.cmdline.CommandLineProgram.instanceMain([Ljava/lang/String;)Ljava/lang/Object;+14
+j  org.broadinstitute.hellbender.Main.runCommandLineProgram(Lorg/broadinstitute/hellbender/cmdline/CommandLineProgram;[Ljava/lang/String;)Ljava/lang/Object;+20
+j  org.broadinstitute.hellbender.Main.mainEntry([Ljava/lang/String;)V+22
+j  org.broadinstitute.hellbender.Main.main([Ljava/lang/String;)V+8
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007effbc1ff800 JavaThread "Service Thread" daemon [_thread_blocked, id=12533, stack(0x00007eff56eff000,0x00007eff57000000)]
+  0x00007effbc1ec800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=12532, stack(0x00007eff57001000,0x00007eff57101000)]
+  0x00007effbc1ea800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=12531, stack(0x00007eff57102000,0x00007eff57202000)]
+  0x00007effbc1dd000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=12530, stack(0x00007eff57203000,0x00007eff57303000)]
+  0x00007effbc1da800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=12529, stack(0x00007eff57303000,0x00007eff57404000)]
+  0x00007effbc1ac000 JavaThread "Finalizer" daemon [_thread_blocked, id=12515, stack(0x00007eff57404000,0x00007eff57505000)]
+  0x00007effbc1a7800 JavaThread "Reference Handler" daemon [_thread_blocked, id=12513, stack(0x00007eff57505000,0x00007eff57606000)]
+=>0x00007effbc04c800 JavaThread "main" [_thread_in_native, id=12489, stack(0x00007effc5e61000,0x00007effc5f61000)]
+
+Other Threads:
+  0x00007effbc19d800 VMThread [stack: 0x00007eff57607000,0x00007eff57707000] [id=12511]
+  0x00007effbc214000 WatcherThread [stack: 0x00007eff56dff000,0x00007eff56eff000] [id=12534]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000080200000, size: 30718 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 0
+Compressed class space size: 1073741824 Address: 0x0000000800000000
+
+Heap:
+ PSYoungGen      total 10443264K, used 5653847K [0x0000000580100000, 0x0000000800000000, 0x0000000800000000)
+  eden space 10405888K, 54% used [0x0000000580100000,0x00000006d7080438,0x00000007fb300000)
+  from space 37376K, 92% used [0x00000007fdb80000,0x00000007ffd557e8,0x0000000800000000)
+  to   space 39424K, 0% used [0x00000007fb300000,0x00000007fb300000,0x00000007fd980000)
+ ParOldGen       total 4672512K, used 1878618K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 40% used [0x0000000080200000,0x00000000f2c96b00,0x000000019d500000)
+ Metaspace       used 49522K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+
+Card table byte_map: [0x00007effa9400000,0x00007effad000000] byte_map_base: 0x00007effa8fff000
+
+Marking Bits: (ParMarkBitMap*) 0x00007effc512c520
+ Begin Bits: [0x00007eff58010000, 0x00007eff76008000)
+ End Bits:   [0x00007eff76008000, 0x00007eff94000000)
+
+Polling page: 0x00007effc5f7c000
+
+CodeCache: size=245760Kb used=20836Kb max_used=21446Kb free=224923Kb
+ bounds [0x00007effad000000, 0x00007effae620000, 0x00007effbc000000]
+ total_blobs=6270 nmethods=5709 adapters=473
+ compilation: enabled
+
+Compilation events (250 events):
+Event: 455533,485 Thread 0x00007effbc1ec800 nmethod 9107% 0x00007effad87e950 code [0x00007effad87ebc0, 0x00007effad87fb68]
+Event: 455533,487 Thread 0x00007effbc1ea800 nmethod 9108 0x00007effad94a310 code [0x00007effad94a460, 0x00007effad94a578]
+Event: 462530,183 Thread 0x00007effbc1dd000 9109       4       java.util.TimSort::mergeHi (732 bytes)
+Event: 462530,231 Thread 0x00007effbc1dd000 nmethod 9109 0x00007effad353a50 code [0x00007effad353c40, 0x00007effad3552f8]
+Event: 479459,780 Thread 0x00007effbc1ec800 9110       3       htsjdk.samtools.DiskBasedBAMFileIndex::getSpanOverlapping (101 bytes)
+Event: 479459,783 Thread 0x00007effbc1ec800 nmethod 9110 0x00007effadac6290 code [0x00007effadac6540, 0x00007effadac7868]
+Event: 479459,784 Thread 0x00007effbc1ec800 9111 %     3       htsjdk.samtools.Chunk::optimizeChunkList @ 23 (146 bytes)
+Event: 479459,785 Thread 0x00007effbc1ec800 nmethod 9111% 0x00007effad9c3590 code [0x00007effad9c3820, 0x00007effad9c48e8]
+Event: 498098,150 Thread 0x00007effbc1ec800 9112       3       htsjdk.samtools.Chunk::optimizeChunkList (146 bytes)
+Event: 498098,152 Thread 0x00007effbc1ec800 nmethod 9112 0x00007effadeed290 code [0x00007effadeed5a0, 0x00007effadeeeeb8]
+Event: 517062,572 Thread 0x00007effbc1ec800 9113       3       java.util.DualPivotQuicksort::doSort (620 bytes)
+Event: 517062,576 Thread 0x00007effbc1ec800 nmethod 9113 0x00007effadeb2dd0 code [0x00007effadeb3080, 0x00007effadeb4618]
+Event: 517073,097 Thread 0x00007effbc1ea800 9114       4       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$345/10044740::applyAsDouble (5 bytes)
+Event: 517073,098 Thread 0x00007effbc1ea800 nmethod 9114 0x00007effada69f90 code [0x00007effada6a100, 0x00007effada6a238]
+Event: 517073,100 Thread 0x00007effbc1ea800 9115 %     4       org.broadinstitute.hellbender.utils.IndexRange::forEach @ 12 (34 bytes)
+Event: 517073,130 Thread 0x00007effbc1ea800 nmethod 9115% 0x00007effae1ec750 code [0x00007effae1ec9a0, 0x00007effae1ed850]
+Event: 517074,919 Thread 0x00007effbc1ec800 9117       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$334/1739111611::get$Lambda (9 bytes)
+Event: 517074,919 Thread 0x00007effbc1dd000 9116       4       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator::calculate (684 bytes)
+Event: 517074,919 Thread 0x00007effbc1ec800 nmethod 9117 0x00007effad976650 code [0x00007effad9767c0, 0x00007effad976a30]
+Event: 517074,919 Thread 0x00007effbc1ec800 9118       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$334/1739111611::<init> (10 bytes)
+Event: 517074,919 Thread 0x00007effbc1ec800 nmethod 9118 0x00007effad856650 code [0x00007effad8567c0, 0x00007effad856990]
+Event: 517074,919 Thread 0x00007effbc1ec800 9119       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$335/654299840::get$Lambda (10 bytes)
+Event: 517074,920 Thread 0x00007effbc1ec800 nmethod 9119 0x00007effad97a010 code [0x00007effad97a180, 0x00007effad97a410]
+Event: 517074,920 Thread 0x00007effbc1ec800 9120       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$335/654299840::<init> (15 bytes)
+Event: 517074,920 Thread 0x00007effbc1ec800 nmethod 9120 0x00007effad491f50 code [0x00007effad4920c0, 0x00007effad4922b0]
+Event: 517074,920 Thread 0x00007effbc1ec800 9123       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$357/979074430::get$Lambda (9 bytes)
+Event: 517074,920 Thread 0x00007effbc1ec800 nmethod 9123 0x00007effaddff750 code [0x00007effaddff8c0, 0x00007effaddffb30]
+Event: 517074,920 Thread 0x00007effbc1ec800 9124       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$357/979074430::<init> (10 bytes)
+Event: 517074,920 Thread 0x00007effbc1ec800 nmethod 9124 0x00007effad5a26d0 code [0x00007effad5a2840, 0x00007effad5a2a10]
+Event: 517074,920 Thread 0x00007effbc1ec800 9125       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$358/332149166::get$Lambda (9 bytes)
+Event: 517074,921 Thread 0x00007effbc1ec800 nmethod 9125 0x00007effae399750 code [0x00007effae3998c0, 0x00007effae399b30]
+Event: 517074,921 Thread 0x00007effbc1ec800 9126       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$358/332149166::<init> (10 bytes)
+Event: 517074,921 Thread 0x00007effbc1ec800 nmethod 9126 0x00007effad47e310 code [0x00007effad47e480, 0x00007effad47e650]
+Event: 517074,921 Thread 0x00007effbc1ec800 9121       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$336/801634926::get$Lambda (9 bytes)
+Event: 517074,921 Thread 0x00007effbc1ec800 nmethod 9121 0x00007effad2a9390 code [0x00007effad2a9500, 0x00007effad2a9750]
+Event: 517074,921 Thread 0x00007effbc1ec800 9122       3       org.broadinstitute.hellbender.tools.walkers.genotyper.afcalc.AlleleFrequencyCalculator$$Lambda$336/801634926::<init> (10 bytes)
+Event: 517074,921 Thread 0x00007effbc1ec800 nmethod 9122 0x00007effad68f490 code [0x00007effad68f600, 0x00007effad68f7b0]
+Event: 517076,002 Thread 0x00007effbc1dd000 nmethod 9116 0x00007effadd19850 code [0x00007effadd1a320, 0x00007effadd218c0]
+Event: 517085,407 Thread 0x00007effbc1dd000 9127       4       java.util.DualPivotQuicksort::doSort (620 bytes)
+Event: 517085,464 Thread 0x00007effbc1dd000 nmethod 9127 0x00007effad6f0550 code [0x00007effad6f0760, 0x00007effad6f1ec8]
+Event: 517089,290 Thread 0x00007effbc1ec800 9128       3       java.util.TimSort::mergeHi (732 bytes)
+Event: 517089,293 Thread 0x00007effbc1ec800 nmethod 9128 0x00007effada4f610 code [0x00007effada4f940, 0x00007effada51cf8]
+Event: 517146,432 Thread 0x00007effbc1ec800 9129 %     3       java.util.TimSort::mergeLo @ 153 (659 bytes)
+Event: 517146,438 Thread 0x00007effbc1ec800 nmethod 9129% 0x00007effae1322d0 code [0x00007effae132600, 0x00007effae134918]
+Event: 517146,500 Thread 0x00007effbc1ec800 9130       3       java.util.TimSort::mergeLo (659 bytes)
+Event: 517146,504 Thread 0x00007effbc1ec800 nmethod 9130 0x00007effaddadd10 code [0x00007effaddae040, 0x00007effaddb0338]
+Event: 517184,892 Thread 0x00007effbc1ea800 9131       4       java.util.TimSort::mergeHi (732 bytes)
+Event: 517184,930 Thread 0x00007effbc1ea800 nmethod 9131 0x00007effae02fd90 code [0x00007effae02ff60, 0x00007effae031418]
+Event: 517199,057 Thread 0x00007effbc1dd000 9132 %     4       java.util.TimSort::mergeLo @ 153 (659 bytes)
+Event: 517199,093 Thread 0x00007effbc1dd000 nmethod 9132% 0x00007effae3bba10 code [0x00007effae3bbbe0, 0x00007effae3bcbd8]
+Event: 517224,869 Thread 0x00007effbc1ea800 9133       4       java.util.TimSort::mergeLo (659 bytes)
+Event: 517224,919 Thread 0x00007effbc1ea800 nmethod 9133 0x00007effad60de10 code [0x00007effad60dfe0, 0x00007effad60f658]
+Event: 522077,160 Thread 0x00007effbc1dd000 9134       4       java.util.stream.SortedOps$SizedRefSortingSink::accept (18 bytes)
+Event: 522077,160 Thread 0x00007effbc1ea800 9135       4       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCallerGenotypingEngine$$Lambda$445/1021596939::apply (11 bytes)
+Event: 522077,162 Thread 0x00007effbc1ea800 nmethod 9135 0x00007effad949bd0 code [0x00007effad949d20, 0x00007effad949e38]
+Event: 522077,162 Thread 0x00007effbc1dd000 nmethod 9134 0x00007effad5fe5d0 code [0x00007effad5fe720, 0x00007effad5fe818]
+Event: 525372,370 Thread 0x00007effbc1ec800 9136       3       java.util.HashMap::newTreeNode (13 bytes)
+Event: 525372,372 Thread 0x00007effbc1ec800 nmethod 9136 0x00007effae477810 code [0x00007effae4779a0, 0x00007effae477d30]
+Event: 559461,167 Thread 0x00007effbc1ea800 9137   !   4       sun.nio.ch.IOUtil::read (93 bytes)
+Event: 559461,168 Thread 0x00007effbc1dd000 9138       4       sun.nio.ch.IOUtil::readIntoNativeBuffer (137 bytes)
+Event: 559461,171 Thread 0x00007effbc1dd000 nmethod 9138 0x00007effad7aaed0 code [0x00007effad7ab040, 0x00007effad7ab288]
+Event: 559461,197 Thread 0x00007effbc1ea800 nmethod 9137 0x00007effae19fed0 code [0x00007effae1a0180, 0x00007effae1a1480]
+Event: 562438,304 Thread 0x00007effbc1dd000 9139   !   4       htsjdk.samtools.reference.IndexedFastaSequenceFile::readFromPosition (89 bytes)
+Event: 562438,329 Thread 0x00007effbc1dd000 nmethod 9139 0x00007effae0e9e90 code [0x00007effae0ea0a0, 0x00007effae0eb080]
+Event: 565118,915 Thread 0x00007effbc1ec800 9140       3       java.util.HashMap::merge (335 bytes)
+Event: 565118,917 Thread 0x00007effbc1ec800 nmethod 9140 0x00007effad282050 code [0x00007effad282340, 0x00007effad283da8]
+Event: 565133,298 Thread 0x00007effbc1dd000 9141       4       java.util.HashMap::merge (335 bytes)
+Event: 565133,316 Thread 0x00007effbc1dd000 nmethod 9141 0x00007effae0b57d0 code [0x00007effae0b59a0, 0x00007effae0b6120]
+Event: 572498,444 Thread 0x00007effbc1dd000 9142       4       java.nio.Bits::copyToArray (68 bytes)
+Event: 572498,446 Thread 0x00007effbc1dd000 nmethod 9142 0x00007effad8ea190 code [0x00007effad8ea2e0, 0x00007effad8ea398]
+Event: 592957,888 Thread 0x00007effbc1dd000 9143       4       org.broadinstitute.hellbender.utils.MathUtils::normalDistribution (78 bytes)
+Event: 592957,891 Thread 0x00007effbc1dd000 nmethod 9143 0x00007effad7e0710 code [0x00007effad7e0900, 0x00007effad7e0d58]
+Event: 602144,930 Thread 0x00007effbc1ec800 9144       3       htsjdk.samtools.SAMBinaryTagAndValue::equals (33 bytes)
+Event: 602144,932 Thread 0x00007effbc1ec800 nmethod 9144 0x00007effad979550 code [0x00007effad9796e0, 0x00007effad979ba8]
+Event: 602144,934 Thread 0x00007effbc1ec800 9145       3       htsjdk.samtools.SAMBinaryTagAndValue::typeSafeEquals (55 bytes)
+Event: 602144,935 Thread 0x00007effbc1ec800 nmethod 9145 0x00007effad46cd50 code [0x00007effad46cf00, 0x00007effad46d558]
+Event: 614891,004 Thread 0x00007effbc1ea800 9146       4       java.util.AbstractSequentialList::<init> (5 bytes)
+Event: 614891,005 Thread 0x00007effbc1ea800 nmethod 9146 0x00007effad2a9190 code [0x00007effad2a92e0, 0x00007effad2a9338]
+Event: 614923,430 Thread 0x00007effbc1dd000 9147       4       htsjdk.samtools.reference.ReferenceSequence::<init> (26 bytes)
+Event: 614923,433 Thread 0x00007effbc1dd000 nmethod 9147 0x00007effae3bb750 code [0x00007effae3bb8a0, 0x00007effae3bb958]
+Event: 614923,434 Thread 0x00007effbc1ec800 9148   !   3       org.broadinstitute.hellbender.utils.fasta.CachingIndexedFastaSequenceFile::getSubsequenceAt (583 bytes)
+Event: 614923,442 Thread 0x00007effbc1ec800 nmethod 9148 0x00007effae1ef810 code [0x00007effae1efdc0, 0x00007effae1f3c88]
+Event: 614934,858 Thread 0x00007effbc1ea800 9149   !   4       org.broadinstitute.hellbender.utils.fasta.CachingIndexedFastaSequenceFile::getSubsequenceAt (583 bytes)
+Event: 614934,898 Thread 0x00007effbc1ea800 nmethod 9149 0x00007effadfe3c10 code [0x00007effadfe3e40, 0x00007effadfe4dd0]
+Event: 614937,942 Thread 0x00007effbc1dd000 9150       4       htsjdk.samtools.SAMSequenceDictionary::getSequenceIndex (25 bytes)
+Event: 614937,956 Thread 0x00007effbc1dd000 nmethod 9150 0x00007effad713b10 code [0x00007effad713ca0, 0x00007effad714168]
+Event: 615258,706 Thread 0x00007effbc1ec800 9152       2       org.apache.logging.log4j.LogManager::callerClass (27 bytes)
+Event: 615258,706 Thread 0x00007effbc1ea800 9151       4       org.apache.logging.log4j.LogManager::getLogger (20 bytes)
+Event: 615258,707 Thread 0x00007effbc1ec800 nmethod 9152 0x00007effad927950 code [0x00007effad927ae0, 0x00007effad927d38]
+Event: 615258,707 Thread 0x00007effbc1dd000 9153       4       htsjdk.samtools.BAMFileReader$BAMFileIndexIterator::getNextRecord (97 bytes)
+Event: 615258,716 Thread 0x00007effbc1ea800 nmethod 9151 0x00007effad9c6750 code [0x00007effad9c68e0, 0x00007effad9c6b18]
+Event: 615258,726 Thread 0x00007effbc1dd000 nmethod 9153 0x00007effae48d790 code [0x00007effae48d9c0, 0x00007effae48e330]
+Event: 615320,996 Thread 0x00007effbc1ec800 9154       1       htsjdk.samtools.BAMFileReader::access$500 (5 bytes)
+Event: 615320,996 Thread 0x00007effbc1ec800 nmethod 9154 0x00007effad281d10 code [0x00007effad281e60, 0x00007effad281f50]
+Event: 615321,075 Thread 0x00007effbc1ec800 9155       3       htsjdk.samtools.AbstractBAMFileIndex::getNumIndexLevels (5 bytes)
+Event: 615321,075 Thread 0x00007effbc1ec800 nmethod 9155 0x00007effad8ec650 code [0x00007effad8ec7c0, 0x00007effad8ec910]
+Event: 615322,934 Thread 0x00007effbc1ec800 9156       1       htsjdk.samtools.BAMFileReader::access$200 (5 bytes)
+Event: 615322,935 Thread 0x00007effbc1ec800 nmethod 9156 0x00007effae0e9bd0 code [0x00007effae0e9d20, 0x00007effae0e9e10]
+Event: 615345,810 Thread 0x00007effbc1ec800 9157       3       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.ReferenceConfidenceModel::readHasNoPlausibleIdealsOfSize (315 bytes)
+Event: 615345,813 Thread 0x00007effbc1ec800 nmethod 9157 0x00007effad5796d0 code [0x00007effad5799c0, 0x00007effad57b238]
+Event: 615346,607 Thread 0x00007effbc1ea800 9158       4       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.ReferenceConfidenceModel::readHasNoPlausibleIdealsOfSize (315 bytes)
+Event: 615346,689 Thread 0x00007effbc1ea800 nmethod 9158 0x00007effadd14b10 code [0x00007effadd14ec0, 0x00007effadd17260]
+Event: 615371,257 Thread 0x00007effbc1ec800 9159       3       org.broadinstitute.hellbender.engine.AssemblyRegionWalker::processReadShard (182 bytes)
+Event: 615371,259 Thread 0x00007effbc1ec800 nmethod 9159 0x00007effae234590 code [0x00007effae234960, 0x00007effae236f98]
+Event: 615390,792 Thread 0x00007effbc1ea800 9160       4       java.util.ArrayList::sort (48 bytes)
+Event: 615390,794 Thread 0x00007effbc1ea800 nmethod 9160 0x00007effad5fe310 code [0x00007effad5fe460, 0x00007effad5fe528]
+Event: 615418,700 Thread 0x00007effbc1ec800 9161       3       java.util.Arrays::sort (47 bytes)
+Event: 615418,701 Thread 0x00007effbc1ec800 nmethod 9161 0x00007effad268cd0 code [0x00007effad268e80, 0x00007effad2692b8]
+Event: 615438,328 Thread 0x00007effbc1ea800 9162       4       java.util.Arrays::sort (47 bytes)
+Event: 615438,380 Thread 0x00007effbc1ea800 nmethod 9162 0x00007effadacbbd0 code [0x00007effadacbee0, 0x00007effadacea00]
+Event: 615449,442 Thread 0x00007effbc1ec800 9163       3       org.broadinstitute.hellbender.utils.activityprofile.BandPassActivityProfile::makeKernel (46 bytes)
+Event: 615449,442 Thread 0x00007effbc1ec800 nmethod 9163 0x00007effad6dff10 code [0x00007effad6e00a0, 0x00007effad6e03d8]
+Event: 615468,348 Thread 0x00007effbc1dd000 9164       4       java.util.ComparableTimSort::sort (219 bytes)
+Event: 615468,368 Thread 0x00007effbc1dd000 nmethod 9164 0x00007effad693250 code [0x00007effad693440, 0x00007effad693f00]
+Event: 615562,588 Thread 0x00007effbc1ec800 9165       3       htsjdk.samtools.BAMFileReader$BAMFileIndexIterator::getNextRecord (97 bytes)
+Event: 615562,590 Thread 0x00007effbc1ec800 nmethod 9165 0x00007effad7c5250 code [0x00007effad7c5400, 0x00007effad7c58e8]
+Event: 615563,472 Thread 0x00007effbc1ec800 9166       3       org.broadinstitute.hellbender.utils.locusiterator.LocusIteratorByState::<init> (13 bytes)
+Event: 615563,472 Thread 0x00007effbc1ec800 nmethod 9166 0x00007effae23b910 code [0x00007effae23ba80, 0x00007effae23bc08]
+Event: 615563,545 Thread 0x00007effbc1ec800 9168       3       htsjdk.samtools.AbstractBAMFileIndex::seek (11 bytes)
+Event: 615563,546 Thread 0x00007effbc1ec800 nmethod 9168 0x00007effadacb610 code [0x00007effadacb780, 0x00007effadacba68]
+Event: 615563,546 Thread 0x00007effbc1ec800 9167       3       org.broadinstitute.hellbender.transformers.ReadTransformer::identity (6 bytes)
+Event: 615563,547 Thread 0x00007effbc1ec800 nmethod 9167 0x00007effad7ffdd0 code [0x00007effad7fff40, 0x00007effad800210]
+Event: 615563,547 Thread 0x00007effbc1ec800 9169       1       htsjdk.samtools.BAMFileReader::access$400 (5 bytes)
+Event: 615563,547 Thread 0x00007effbc1ec800 nmethod 9169 0x00007effad741010 code [0x00007effad741160, 0x00007effad741250]
+Event: 615563,547 Thread 0x00007effbc1ec800 9170       1       htsjdk.samtools.util.BinaryCodec::getInputStream (5 bytes)
+Event: 615563,547 Thread 0x00007effbc1ec800 nmethod 9170 0x00007effad740d50 code [0x00007effad740ea0, 0x00007effad740fb0]
+Event: 615563,547 Thread 0x00007effbc1ec800 9171       1       htsjdk.samtools.util.BinaryCodec::getInputFileName (5 bytes)
+Event: 615563,547 Thread 0x00007effbc1ec800 nmethod 9171 0x00007effae414c90 code [0x00007effae414de0, 0x00007effae414ef0]
+Event: 615563,548 Thread 0x00007effbc1ec800 9172       3       org.broadinstitute.hellbender.utils.IntervalUtils::shardIndex (6 bytes)
+Event: 615563,548 Thread 0x00007effbc1ec800 nmethod 9172 0x00007effae414950 code [0x00007effae414aa0, 0x00007effae414bf0]
+Event: 615563,548 Thread 0x00007effbc1ec800 9173       3       org.broadinstitute.hellbender.utils.iterators.SamReaderQueryingIterator::hasQueryIntervals (21 bytes)
+Event: 615563,549 Thread 0x00007effbc1ec800 nmethod 9173 0x00007effad70a850 code [0x00007effad70a9c0, 0x00007effad70abb0]
+Event: 615563,561 Thread 0x00007effbc1ec800 9174       3       htsjdk.samtools.AbstractBAMFileIndex::getMaxBinNumberForSequenceLength (14 bytes)
+Event: 615563,562 Thread 0x00007effbc1ec800 nmethod 9174 0x00007effad70a290 code [0x00007effad70a420, 0x00007effad70a688]
+Event: 615563,562 Thread 0x00007effbc1ec800 9175       3       htsjdk.samtools.AbstractBAMFileIndex::getFirstBinInLevel (10 bytes)
+Event: 615563,562 Thread 0x00007effbc1ec800 nmethod 9175 0x00007effaddcd0d0 code [0x00007effaddcd240, 0x00007effaddcd3e8]
+Event: 615564,186 Thread 0x00007effbc1ec800 9177       3       org.broadinstitute.hellbender.utils.iterators.SamReaderQueryingIterator::loadNextIterator (80 bytes)
+Event: 615564,187 Thread 0x00007effbc1ec800 nmethod 9177 0x00007effae241b50 code [0x00007effae241d00, 0x00007effae242328]
+Event: 615564,187 Thread 0x00007effbc1ec800 9176       3       java.util.HashMap$Node::setValue (12 bytes)
+Event: 615564,187 Thread 0x00007effbc1ec800 nmethod 9176 0x00007effae4145d0 code [0x00007effae414720, 0x00007effae414890]
+Event: 615564,187 Thread 0x00007effbc1ec800 9178       3       htsjdk.samtools.LinearIndex::<init> (20 bytes)
+Event: 615564,188 Thread 0x00007effbc1ec800 nmethod 9178 0x00007effaddcccd0 code [0x00007effaddcce40, 0x00007effaddcd010]
+Event: 615564,188 Thread 0x00007effbc1ec800 9179       3       htsjdk.samtools.BinningIndexBuilder::generateIndexContent (133 bytes)
+Event: 615564,189 Thread 0x00007effbc1ec800 nmethod 9179 0x00007effadc6e910 code [0x00007effadc6eae0, 0x00007effadc6f2b0]
+Event: 615574,592 Thread 0x00007effbc1ec800 9180       3       org.broadinstitute.hellbender.utils.activityprofile.ActivityProfile::getSpan (23 bytes)
+Event: 615574,594 Thread 0x00007effbc1ec800 nmethod 9180 0x00007effae49f010 code [0x00007effae49f1a0, 0x00007effae49f5f8]
+Event: 615574,595 Thread 0x00007effbc1ec800 9181       3       org.broadinstitute.hellbender.utils.SimpleInterval::spanWith (62 bytes)
+Event: 615574,598 Thread 0x00007effbc1ec800 nmethod 9181 0x00007effadaa5cd0 code [0x00007effadaa5f80, 0x00007effadaa71e8]
+Event: 615580,666 Thread 0x00007effbc1ec800 9182       3       htsjdk.samtools.BAMFileSpan::<init> (17 bytes)
+Event: 615580,667 Thread 0x00007effbc1ec800 nmethod 9182 0x00007effad26f890 code [0x00007effad26fa00, 0x00007effad26fc88]
+Event: 615580,668 Thread 0x00007effbc1ec800 9183       3       htsjdk.samtools.AbstractBAMFileIndex::query (354 bytes)
+Event: 615580,673 Thread 0x00007effbc1ec800 nmethod 9183 0x00007effadb13150 code [0x00007effadb135e0, 0x00007effadb16938]
+Event: 615580,674 Thread 0x00007effbc1ec800 9184       3       htsjdk.samtools.BinningIndexContent::getAllChunks (61 bytes)
+Event: 615580,675 Thread 0x00007effbc1ec800 nmethod 9184 0x00007effad6a9e50 code [0x00007effad6aa0a0, 0x00007effad6aacc8]
+Event: 615584,673 Thread 0x00007effbc1ec800 9185       3       org.broadinstitute.hellbender.utils.activityprofile.BandPassActivityProfile::determineFilterSize (40 bytes)
+Event: 615584,674 Thread 0x00007effbc1ec800 nmethod 9185 0x00007effad26f310 code [0x00007effad26f480, 0x00007effad26f710]
+Event: 615584,701 Thread 0x00007effbc1ec800 9186       3       java.nio.ByteBuffer::allocate (22 bytes)
+Event: 615584,702 Thread 0x00007effbc1ec800 nmethod 9186 0x00007effad67d890 code [0x00007effad67da20, 0x00007effad67ddf8]
+Event: 615584,703 Thread 0x00007effbc1ec800 9187       3       java.nio.HeapByteBuffer::<init> (13 bytes)
+Event: 615584,703 Thread 0x00007effbc1ec800 nmethod 9187 0x00007effadb12cd0 code [0x00007effadb12e40, 0x00007effadb13088]
+Event: 615812,459 Thread 0x00007effbc1ec800 9188       1       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller::assemblyRegionEvaluator (5 bytes)
+Event: 615812,460 Thread 0x00007effbc1ec800 nmethod 9188 0x00007effae49ed50 code [0x00007effae49eea0, 0x00007effae49efb0]
+Event: 615812,461 Thread 0x00007effbc1ec800 9189       1       org.broadinstitute.hellbender.engine.MultiIntervalLocalReadShard::getIntervals (5 bytes)
+Event: 615812,461 Thread 0x00007effbc1ec800 nmethod 9189 0x00007effad67d510 code [0x00007effad67d660, 0x00007effad67d770]
+Event: 615813,202 Thread 0x00007effbc1ec800 9190       3       htsjdk.samtools.BAMFileReader$BAMQueryFilteringIterator::advance (92 bytes)
+Event: 615813,203 Thread 0x00007effbc1ec800 nmethod 9190 0x00007effad695950 code [0x00007effad695b20, 0x00007effad696278]
+Event: 615830,528 Thread 0x00007effbc1ec800 9191       3       htsjdk.samtools.BAMFileReader$AbstractBamIterator::<init> (6 bytes)
+Event: 615830,528 Thread 0x00007effbc1ec800 nmethod 9191 0x00007effad913150 code [0x00007effad9132c0, 0x00007effad9134f0]
+Event: 615830,529 Thread 0x00007effbc1ec800 9192       3       htsjdk.samtools.BAMFileReader$AbstractBamIterator::<init> (15 bytes)
+Event: 615830,529 Thread 0x00007effbc1ec800 nmethod 9192 0x00007effad912d50 code [0x00007effad912ec0, 0x00007effad913090]
+Event: 615830,530 Thread 0x00007effbc1ec800 9193       3       org.broadinstitute.hellbender.utils.iterators.ReadTransformingIterator::<init> (27 bytes)
+Event: 615830,531 Thread 0x00007effbc1ec800 nmethod 9193 0x00007effad717890 code [0x00007effad717a40, 0x00007effad717fb8]
+Event: 615830,795 Thread 0x00007effbc1ec800 9194       3       htsjdk.samtools.AbstractBAMFileIndex::assertLevelIsValid (51 bytes)
+Event: 615830,796 Thread 0x00007effbc1ec800 nmethod 9194 0x00007effae18f690 code [0x00007effae18f8c0, 0x00007effae190568]
+Event: 615833,994 Thread 0x00007effbc1ec800 9195       3       org.broadinstitute.hellbender.utils.iterators.ShardedIntervalIterator::advanceInterval (85 bytes)
+Event: 615833,995 Thread 0x00007effbc1ec800 nmethod 9195 0x00007effad985490 code [0x00007effad985640, 0x00007effad985d48]
+Event: 615854,671 Thread 0x00007effbc1ea800 9196       4       htsjdk.samtools.BAMQueryMultipleIntervalsIteratorFilter::compareIntervalToRecord (128 bytes)
+Event: 615854,674 Thread 0x00007effbc1ea800 nmethod 9196 0x00007effad9291d0 code [0x00007effad929340, 0x00007effad929568]
+Event: 615883,775 Thread 0x00007effbc1ec800 9197       3       java.util.Collections$EmptyList::toArray (5 bytes)
+Event: 615883,776 Thread 0x00007effbc1ec800 nmethod 9197 0x00007effad5dd110 code [0x00007effad5dd280, 0x00007effad5dd470]
+Event: 615902,019 Thread 0x00007effbc1ec800 9198       3       org.broadinstitute.hellbender.tools.walkers.genotyper.GenotypingEngine$$Lambda$429/198979478::test (12 bytes)
+Event: 615902,020 Thread 0x00007effbc1ec800 nmethod 9198 0x00007effadccda10 code [0x00007effadccdb80, 0x00007effadccde28]
+Event: 615973,323 Thread 0x00007effbc1ea800 9199       4       org.apache.logging.log4j.core.Logger::log (67 bytes)
+Event: 615973,416 Thread 0x00007effbc1ea800 nmethod 9199 0x00007effae43bf90 code [0x00007effae43c3e0, 0x00007effae43e6f8]
+Event: 616015,000 Thread 0x00007effbc1ec800 9200       3       org.broadinstitute.hellbender.utils.logging.OneShotLogger::<init> (18 bytes)
+Event: 616015,002 Thread 0x00007effbc1ec800 nmethod 9200 0x00007effad68df50 code [0x00007effad68e160, 0x00007effad68ea98]
+Event: 616018,812 Thread 0x00007effbc1ec800 9201       3       java.util.TreeSet::size (10 bytes)
+Event: 616018,812 Thread 0x00007effbc1ec800 nmethod 9201 0x00007effadccd5d0 code [0x00007effadccd740, 0x00007effadccd968]
+Event: 616019,415 Thread 0x00007effbc1ec800 9202       3       org.broadinstitute.hellbender.engine.spark.AssemblyRegionArgumentCollection::validate (168 bytes)
+Event: 616019,417 Thread 0x00007effbc1ec800 nmethod 9202 0x00007effadef04d0 code [0x00007effadef07e0, 0x00007effadef1ef8]
+Event: 616019,417 Thread 0x00007effbc1ec800 9203       3       htsjdk.samtools.util.BinaryCodec::<init> (17 bytes)
+Event: 616019,418 Thread 0x00007effbc1ec800 nmethod 9203 0x00007effadcf2350 code [0x00007effadcf2500, 0x00007effadcf2af8]
+Event: 616019,418 Thread 0x00007effbc1ec800 9204       3       htsjdk.samtools.util.BinaryCodec::initByteBuffer (21 bytes)
+Event: 616019,418 Thread 0x00007effbc1ec800 nmethod 9204 0x00007effae2fc390 code [0x00007effae2fc520, 0x00007effae2fc998]
+Event: 616019,428 Thread 0x00007effbc1ec800 9205       3       htsjdk.samtools.BAMFileReader::hasIndex (27 bytes)
+Event: 616019,429 Thread 0x00007effbc1ec800 nmethod 9205 0x00007effade01ad0 code [0x00007effade01c40, 0x00007effade01e70]
+Event: 616019,429 Thread 0x00007effbc1ec800 9206       3       htsjdk.samtools.util.BinaryCodec::setInputStream (11 bytes)
+Event: 616019,429 Thread 0x00007effbc1ec800 nmethod 9206 0x00007effad928e50 code [0x00007effad928fa0, 0x00007effad929110]
+Event: 616019,429 Thread 0x00007effbc1ec800 9207       3       htsjdk.samtools.util.BinaryCodec::setInputFileName (6 bytes)
+Event: 616019,429 Thread 0x00007effbc1ec800 nmethod 9207 0x00007effae2fbfd0 code [0x00007effae2fc120, 0x00007effae2fc290]
+Event: 616019,430 Thread 0x00007effbc1ec800 9208       3       org.broadinstitute.hellbender.utils.read.ReadUtils::getSamplesFromHeader (66 bytes)
+Event: 616019,432 Thread 0x00007effbc1ec800 nmethod 9208 0x00007effad8cc690 code [0x00007effad8cc960, 0x00007effad8cdee8]
+Event: 616019,432 Thread 0x00007effbc1ec800 9209       3       htsjdk.samtools.SAMFileHeader::getReadGroups (8 bytes)
+Event: 616019,433 Thread 0x00007effbc1ec800 nmethod 9209 0x00007effae395bd0 code [0x00007effae395dc0, 0x00007effae3966f8]
+Event: 616025,349 Thread 0x00007effbc1ec800 9210       3       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCaller::makePreReadFilterTransformer (4 bytes)
+Event: 616025,350 Thread 0x00007effbc1ec800 nmethod 9210 0x00007effae27b610 code [0x00007effae27b7e0, 0x00007effae27bf38]
+Event: 616025,351 Thread 0x00007effbc1ec800 9211       3       org.broadinstitute.hellbender.tools.walkers.haplotypecaller.HaplotypeCallerEngine::makeStandardHCReadTransformer (9 bytes)
+Event: 616025,351 Thread 0x00007effbc1ec800 nmethod 9211 0x00007effad84a890 code [0x00007effad84aa60, 0x00007effad84b138]
+Event: 616025,352 Thread 0x00007effbc1ec800 9212       3       htsjdk.samtools.QueryInterval::<init> (51 bytes)
+Event: 616025,353 Thread 0x00007effbc1ec800 nmethod 9212 0x00007effae01f3d0 code [0x00007effae01f5c0, 0x00007effae01fe98]
+Event: 616025,357 Thread 0x00007effbc1ec800 9213       3       htsjdk.samtools.BinningIndexBuilder::<init> (8 bytes)
+Event: 616025,357 Thread 0x00007effbc1ec800 nmethod 9213 0x00007effade01710 code [0x00007effade01880, 0x00007effade01a08]
+Event: 616025,359 Thread 0x00007effbc1ec800 9214       3       htsjdk.samtools.BinningIndexBuilder::<init> (72 bytes)
+Event: 616025,360 Thread 0x00007effbc1ec800 nmethod 9214 0x00007effaddef410 code [0x00007effaddef5c0, 0x00007effaddefb38]
+Event: 616025,410 Thread 0x00007effbc1ec800 9215       3       htsjdk.samtools.SamReader$AssertingIterator::close (10 bytes)
+Event: 616025,410 Thread 0x00007effbc1ec800 nmethod 9215 0x00007effad280d50 code [0x00007effad280ec0, 0x00007effad2810e8]
+Event: 616025,411 Thread 0x00007effbc1ec800 9216       3       htsjdk.samtools.BAMFileReader$BAMQueryFilteringIterator::close (5 bytes)
+Event: 616025,411 Thread 0x00007effbc1ec800 nmethod 9216 0x00007effade01350 code [0x00007effade014c0, 0x00007effade01648]
+Event: 616039,192 Thread 0x00007effbc1ec800 9217       3       org.broadinstitute.hellbender.utils.downsampling.ReservoirDownsampler::<init> (37 bytes)
+Event: 616039,194 Thread 0x00007effbc1ec800 nmethod 9217 0x00007effad770d90 code [0x00007effad770f40, 0x00007effad771478]
+Event: 616039,196 Thread 0x00007effbc1ec800 9219       3       java.util.stream.ReferencePipeline::toArray (21 bytes)
+Event: 616039,196 Thread 0x00007effbc1ec800 nmethod 9219 0x00007effad7b85d0 code [0x00007effad7b8760, 0x00007effad7b8a88]
+Event: 616039,198 Thread 0x00007effbc1ec800 9218       3       org.broadinstitute.hellbender.utils.iterators.SamReaderQueryingIterator::close (17 bytes)
+Event: 616039,198 Thread 0x00007effbc1ec800 nmethod 9218 0x00007effad92a510 code [0x00007effad92a680, 0x00007effad92a8e8]
+Event: 616039,262 Thread 0x00007effbc1ec800 9220       3       htsjdk.tribble.index.tabix.TabixIndexCreator::advanceToReference (97 bytes)
+Event: 616039,264 Thread 0x00007effbc1ec800 nmethod 9220 0x00007effae377b90 code [0x00007effae377da0, 0x00007effae378708]
+Event: 616216,474 Thread 0x00007effbc1ec800 9221       3       htsjdk.samtools.GenomicIndexUtil::regionToBins (240 bytes)
+Event: 616216,476 Thread 0x00007effbc1ec800 nmethod 9221 0x00007effae3a4c90 code [0x00007effae3a4ea0, 0x00007effae3a59e8]
+Event: 616216,478 Thread 0x00007effbc1ec800 9222       3       htsjdk.samtools.AbstractBAMFileIndex::skipToSequence (145 bytes)
+Event: 616216,481 Thread 0x00007effbc1ec800 nmethod 9222 0x00007effadda2410 code [0x00007effadda2700, 0x00007effadda41f8]
+Event: 616350,396 Thread 0x00007effbc1ec800 9223       3       htsjdk.samtools.util.BlockCompressedInputStream::seek (188 bytes)
+Event: 616350,399 Thread 0x00007effbc1ec800 nmethod 9223 0x00007effad244210 code [0x00007effad244500, 0x00007effad245a98]
+Event: 616352,045 Thread 0x00007effbc1dd000 9224       4       java.util.Collections::singletonList (9 bytes)
+Event: 616352,047 Thread 0x00007effbc1dd000 nmethod 9224 0x00007effaddef150 code [0x00007effaddef2a0, 0x00007effaddef378]
+Event: 616381,840 Thread 0x00007effbc1ea800 9225 %     4       org.broadinstitute.hellbender.utils.activityprofile.BandPassActivityProfile::makeKernel @ 14 (46 bytes)
+Event: 616381,861 Thread 0x00007effbc1ea800 nmethod 9225% 0x00007effad769e90 code [0x00007effad76a0e0, 0x00007effad76ad98]
+Event: 616382,934 Thread 0x00007effbc1dd000 9226       4       org.apache.logging.log4j.core.Logger::requiresLocation (8 bytes)
+Event: 616382,935 Thread 0x00007effbc1dd000 nmethod 9226 0x00007effad740b10 code [0x00007effad740c60, 0x00007effad740cd8]
+Event: 616384,058 Thread 0x00007effbc1ec800 9227       3       org.broadinstitute.hellbender.utils.iterators.ReadCachingIterator::<init> (24 bytes)
+Event: 616384,059 Thread 0x00007effbc1ec800 nmethod 9227 0x00007effad280850 code [0x00007effad2809c0, 0x00007effad280c68]
+Event: 616384,059 Thread 0x00007effbc1ec800 9228       3       org.broadinstitute.hellbender.utils.activityprofile.BandPassActivityProfile::<init> (14 bytes)
+Event: 616384,059 Thread 0x00007effbc1ec800 nmethod 9228 0x00007effad770950 code [0x00007effad770ac0, 0x00007effad770c48]
+Event: 616384,059 Thread 0x00007effbc1ec800 9229       3       org.broadinstitute.hellbender.utils.locusiterator.LocusIteratorByState::<init> (15 bytes)
+Event: 616384,060 Thread 0x00007effbc1ec800 nmethod 9229 0x00007effadfae510 code [0x00007effadfae6a0, 0x00007effadfae918]
+Event: 616384,062 Thread 0x00007effbc1ec800 9230       3       org.broadinstitute.hellbender.engine.AssemblyRegionIterator::<init> (208 bytes)
+Event: 616384,065 Thread 0x00007effbc1ec800 nmethod 9230 0x00007effad80b2d0 code [0x00007effad80b680, 0x00007effad80d2a8]
+Event: 616384,065 Thread 0x00007effbc1ec800 9231       3       org.broadinstitute.hellbender.utils.iterators.IntervalLocusIterator::advanceCurrentInterval (49 bytes)
+Event: 616384,066 Thread 0x00007effbc1ec800 nmethod 9231 0x00007effad71ab90 code [0x00007effad71ada0, 0x00007effad71b948]
+Event: 616631,873 Thread 0x00007effbc1dd000 9232       4       org.broadinstitute.hellbender.utils.activityprofile.BandPassActivityProfile::makeKernel (46 bytes)
+Event: 616631,891 Thread 0x00007effbc1dd000 nmethod 9232 0x00007effada0cb50 code [0x00007effada0cd60, 0x00007effada0d7b8]
+
+GC Heap History (250 events):
+Event: 614523,563 GC heap before
+{Heap before GC invocations=30716 (full 6):
+ PSYoungGen      total 9922048K, used 9922003K [0x0000000580100000, 0x00000007fd500000, 0x0000000800000000)
+  eden space 9914368K, 100% used [0x0000000580100000,0x00000007dd300000,0x00000007dd300000)
+  from space 7680K, 99% used [0x00000007fbd80000,0x00000007fc4f4db8,0x00000007fc500000)
+  to   space 14848K, 0% used [0x00000007fc680000,0x00000007fc680000,0x00000007fd500000)
+ ParOldGen       total 4672512K, used 1787767K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3ddea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+Event: 614523,586 GC heap after
+Heap after GC invocations=30716 (full 6):
+ PSYoungGen      total 10187776K, used 6930K [0x0000000580100000, 0x00000007fcd80000, 0x0000000800000000)
+  eden space 10180608K, 0% used [0x0000000580100000,0x0000000580100000,0x00000007ed700000)
+  from space 7168K, 96% used [0x00000007fc680000,0x00000007fcd448b8,0x00000007fcd80000)
+  to   space 14336K, 0% used [0x00000007fb180000,0x00000007fb180000,0x00000007fbf80000)
+ ParOldGen       total 4672512K, used 1787775K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3dfea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+}
+Event: 614543,013 GC heap before
+{Heap before GC invocations=30717 (full 6):
+ PSYoungGen      total 10187776K, used 10187538K [0x0000000580100000, 0x00000007fcd80000, 0x0000000800000000)
+  eden space 10180608K, 100% used [0x0000000580100000,0x00000007ed700000,0x00000007ed700000)
+  from space 7168K, 96% used [0x00000007fc680000,0x00000007fcd448b8,0x00000007fcd80000)
+  to   space 14336K, 0% used [0x00000007fb180000,0x00000007fb180000,0x00000007fbf80000)
+ ParOldGen       total 4672512K, used 1787775K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3dfea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+Event: 614543,035 GC heap after
+Heap after GC invocations=30717 (full 6):
+ PSYoungGen      total 10418688K, used 8296K [0x0000000580100000, 0x00000007ff200000, 0x0000000800000000)
+  eden space 10404352K, 0% used [0x0000000580100000,0x0000000580100000,0x00000007fb180000)
+  from space 14336K, 57% used [0x00000007fb180000,0x00000007fb99a2b0,0x00000007fbf80000)
+  to   space 13824K, 0% used [0x00000007fe480000,0x00000007fe480000,0x00000007ff200000)
+ ParOldGen       total 4672512K, used 1787783K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3e1ea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+}
+Event: 614561,726 GC heap before
+{Heap before GC invocations=30718 (full 6):
+ PSYoungGen      total 10418688K, used 10412648K [0x0000000580100000, 0x00000007ff200000, 0x0000000800000000)
+  eden space 10404352K, 100% used [0x0000000580100000,0x00000007fb180000,0x00000007fb180000)
+  from space 14336K, 57% used [0x00000007fb180000,0x00000007fb99a2b0,0x00000007fbf80000)
+  to   space 13824K, 0% used [0x00000007fe480000,0x00000007fe480000,0x00000007ff200000)
+ ParOldGen       total 4672512K, used 1787783K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3e1ea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+Event: 614561,759 GC heap after
+Heap after GC invocations=30718 (full 6):
+ PSYoungGen      total 10456576K, used 6432K [0x0000000580100000, 0x00000007fff80000, 0x0000000800000000)
+  eden space 10442752K, 0% used [0x0000000580100000,0x0000000580100000,0x00000007fd700000)
+  from space 13824K, 46% used [0x00000007fe480000,0x00000007feac8160,0x00000007ff200000)
+  to   space 13824K, 0% used [0x00000007fd700000,0x00000007fd700000,0x00000007fe480000)
+ ParOldGen       total 4672512K, used 1787783K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3e1ea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+}
+Event: 614580,557 GC heap before
+{Heap before GC invocations=30719 (full 6):
+ PSYoungGen      total 10456576K, used 10449184K [0x0000000580100000, 0x00000007fff80000, 0x0000000800000000)
+  eden space 10442752K, 100% used [0x0000000580100000,0x00000007fd700000,0x00000007fd700000)
+  from space 13824K, 46% used [0x00000007fe480000,0x00000007feac8160,0x00000007ff200000)
+  to   space 13824K, 0% used [0x00000007fd700000,0x00000007fd700000,0x00000007fe480000)
+ ParOldGen       total 4672512K, used 1787783K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3e1ea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+Event: 614580,571 GC heap after
+Heap after GC invocations=30719 (full 6):
+ PSYoungGen      total 10456576K, used 7961K [0x0000000580100000, 0x00000007fff00000, 0x0000000800000000)
+  eden space 10442752K, 0% used [0x0000000580100000,0x0000000580100000,0x00000007fd700000)
+  from space 13824K, 57% used [0x00000007fd700000,0x00000007fdec6778,0x00000007fe480000)
+  to   space 13312K, 0% used [0x00000007ff200000,0x00000007ff200000,0x00000007fff00000)
+ ParOldGen       total 4672512K, used 1787783K [0x0000000080200000, 0x000000019d500000, 0x0000000580100000)
+  object space 4672512K, 38% used [0x0000000080200000,0x00000000ed3e1ea8,0x000000019d500000)
+ Metaspace       used 49495K, capacity 51325K, committed 51624K, reserved 1093632K
+  class space    used 6411K, capacity 6747K, committed 6824K, reserved 1048576K
+}
+Event: 614600,994 GC heap before
+{Heap before GC invocations=30720 (full 6):
+ PSYoungGen      total 10456576K, used 10450713K [0x0000000580100000, 0x00000007fff00000, 0x0000000800000000)
+  eden space 10442752K, 100% used [0x0000000580100000,0x00000007fd700000,0x00000007fd700000)
+  from space 13824K, 57% used [0x00000007fd700000,0x00000007fdec6778,0x00000007fe480000)
+  to   space 13312K, 0% used [0x00000007ff200000,0x00000007ff200000,0x00000007fff00000)
+ ParOldGen       total 4Event: 0,000 Thread 0x00007effc3e0ccaf GC heap before
+Heap after GC invocations=30720 (full 6):
+ PSYouEvent: 0,000 Thread 0x00007effc5e500f0 GC heap after
+
+[error occurred during error reporting (printing ring buffers), id 0xb]
+
+Dynamic libraries:
+80200000-19d500000 rw-p 00000000 00:00 0 
+19d500000-580100000 ---p 00000000 00:00 0 
+580100000-800000000 rw-p 00000000 00:00 0 
+800000000-8006aa000 rw-p 00000000 00:00 0 
+8006aa000-840000000 ---p 00000000 00:00 0 
+55573bf67000-55573bf68000 r-xp 00000000 08:05 60558749                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/bin/java
+55573c167000-55573c168000 r--p 00000000 08:05 60558749                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/bin/java
+55573c168000-55573c169000 rw-p 00001000 08:05 60558749                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/bin/java
+55573d7ae000-55573d7cf000 rw-p 00000000 00:00 0                          [heap]
+7eff225fd000-7eff227bd000 rw-p 00000000 00:00 0 
+7eff227bd000-7eff227fd000 ---p 00000000 00:00 0 
+7eff227fd000-7eff227fe000 ---p 00000000 00:00 0 
+7eff227fe000-7eff22ffe000 rw-p 00000000 00:00 0 
+7eff22ffe000-7eff22fff000 ---p 00000000 00:00 0 
+7eff22fff000-7eff237ff000 rw-p 00000000 00:00 0 
+7eff237ff000-7eff23800000 ---p 00000000 00:00 0 
+7eff23800000-7eff24000000 rw-p 00000000 00:00 0 
+7eff24000000-7eff24021000 rw-p 00000000 00:00 0 
+7eff24021000-7eff28000000 ---p 00000000 00:00 0 
+7eff28000000-7eff2802b000 rw-p 00000000 00:00 0 
+7eff2802b000-7eff2c000000 ---p 00000000 00:00 0 
+7eff2c000000-7eff2cfba000 rw-p 00000000 00:00 0 
+7eff2cfba000-7eff30000000 ---p 00000000 00:00 0 
+7eff30000000-7eff30021000 rw-p 00000000 00:00 0 
+7eff30021000-7eff34000000 ---p 00000000 00:00 0 
+7eff34000000-7eff35ea9000 rw-p 00000000 00:00 0 
+7eff35ea9000-7eff38000000 ---p 00000000 00:00 0 
+7eff38000000-7eff3a137000 rw-p 00000000 00:00 0 
+7eff3a137000-7eff3c000000 ---p 00000000 00:00 0 
+7eff3c000000-7eff3c021000 rw-p 00000000 00:00 0 
+7eff3c021000-7eff40000000 ---p 00000000 00:00 0 
+7eff40104000-7eff40304000 rw-p 00000000 00:00 0 
+7eff40304000-7eff404a0000 r--s 00000000 00:33 2185774331                 /work/knam/sfrugi_WG/SNV/bam/FC35.bam.bai
+7eff404a0000-7eff406a0000 rw-p 00000000 00:00 0 
+7eff406a0000-7eff406e2000 r-xp 00000000 08:05 27263123                   /tmp/libgkl_pairhmm_omp60163064984343739.so
+7eff406e2000-7eff408e2000 ---p 00042000 08:05 27263123                   /tmp/libgkl_pairhmm_omp60163064984343739.so
+7eff408e2000-7eff408e4000 r--p 00042000 08:05 27263123                   /tmp/libgkl_pairhmm_omp60163064984343739.so
+7eff408e4000-7eff408e5000 rw-p 00044000 08:05 27263123                   /tmp/libgkl_pairhmm_omp60163064984343739.so
+7eff408e5000-7eff40a2f000 rw-p 00000000 00:00 0 
+7eff40a2f000-7eff40a54000 r-xp 00000000 08:05 58197208                   /usr/lib64/libgomp.so.1.0.0
+7eff40a54000-7eff40c53000 ---p 00025000 08:05 58197208                   /usr/lib64/libgomp.so.1.0.0
+7eff40c53000-7eff40c54000 r--p 00024000 08:05 58197208                   /usr/lib64/libgomp.so.1.0.0
+7eff40c54000-7eff40c55000 rw-p 00025000 08:05 58197208                   /usr/lib64/libgomp.so.1.0.0
+7eff40c55000-7eff40c56000 r-xp 00000000 08:05 27263122                   /tmp/libgkl_utils3040045065578229909.so
+7eff40c56000-7eff40e55000 ---p 00001000 08:05 27263122                   /tmp/libgkl_utils3040045065578229909.so
+7eff40e55000-7eff40e56000 r--p 00000000 08:05 27263122                   /tmp/libgkl_utils3040045065578229909.so
+7eff40e56000-7eff41057000 rw-p 00000000 00:00 0 
+7eff41057000-7eff4106d000 r-xp 00000000 08:05 58196635                   /usr/lib64/libresolv-2.17.so
+7eff4106d000-7eff4126d000 ---p 00016000 08:05 58196635                   /usr/lib64/libresolv-2.17.so
+7eff4126d000-7eff4126e000 r--p 00016000 08:05 58196635                   /usr/lib64/libresolv-2.17.so
+7eff4126e000-7eff4126f000 rw-p 00017000 08:05 58196635                   /usr/lib64/libresolv-2.17.so
+7eff4126f000-7eff41271000 rw-p 00000000 00:00 0 
+7eff41271000-7eff41277000 r-xp 00000000 08:05 58196623                   /usr/lib64/libnss_dns-2.17.so
+7eff41277000-7eff41476000 ---p 00006000 08:05 58196623                   /usr/lib64/libnss_dns-2.17.so
+7eff41476000-7eff41477000 r--p 00005000 08:05 58196623                   /usr/lib64/libnss_dns-2.17.so
+7eff41477000-7eff41478000 rw-p 00006000 08:05 58196623                   /usr/lib64/libnss_dns-2.17.so
+7eff41478000-7eff414ae000 r-xp 00000000 08:05 27263114                   /tmp/libgkl_compression6585635128199330227.so
+7eff414ae000-7eff416ae000 ---p 00036000 08:05 27263114                   /tmp/libgkl_compression6585635128199330227.so
+7eff416ae000-7eff416af000 r--p 00036000 08:05 27263114                   /tmp/libgkl_compression6585635128199330227.so
+7eff416af000-7eff416be000 rw-p 00037000 08:05 27263114                   /tmp/libgkl_compression6585635128199330227.so
+7eff416be000-7eff418be000 rw-p 00000000 00:00 0 
+7eff418be000-7eff41abe000 rw-p 00000000 00:00 0 
+7eff41abe000-7eff48000000 r--p 00000000 08:05 58196650                   /usr/lib/locale/locale-archive
+7eff48000000-7eff48021000 rw-p 00000000 00:00 0 
+7eff48021000-7eff4c000000 ---p 00000000 00:00 0 
+7eff4c000000-7eff4c021000 rw-p 00000000 00:00 0 
+7eff4c021000-7eff50000000 ---p 00000000 00:00 0 
+7eff50000000-7eff500bc000 rw-p 00000000 00:00 0 
+7eff500bc000-7eff54000000 ---p 00000000 00:00 0 
+7eff54042000-7eff54242000 rw-p 00000000 00:00 0 
+7eff54242000-7eff54442000 rw-p 00000000 00:00 0 
+7eff54442000-7eff54642000 rw-p 00000000 00:00 0 
+7eff54642000-7eff54842000 rw-p 00000000 00:00 0 
+7eff54842000-7eff54a42000 rw-p 00000000 00:00 0 
+7eff54a42000-7eff54c42000 rw-p 00000000 00:00 0 
+7eff54c42000-7eff54e42000 rw-p 00000000 00:00 0 
+7eff54e42000-7eff55042000 rw-p 00000000 00:00 0 
+7eff55042000-7eff55242000 rw-p 00000000 00:00 0 
+7eff55242000-7eff55442000 rw-p 00000000 00:00 0 
+7eff55442000-7eff55642000 rw-p 00000000 00:00 0 
+7eff55642000-7eff55645000 ---p 00000000 00:00 0 
+7eff55645000-7eff55943000 rw-p 00000000 00:00 0 
+7eff55943000-7eff5594c000 r-xp 00000000 08:05 60558784                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libmanagement.so
+7eff5594c000-7eff55b4b000 ---p 00009000 08:05 60558784                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libmanagement.so
+7eff55b4b000-7eff55b4c000 r--p 00008000 08:05 60558784                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libmanagement.so
+7eff55b4c000-7eff55b4d000 rw-p 00009000 08:05 60558784                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libmanagement.so
+7eff55b4d000-7eff55b65000 r-xp 00000000 08:05 60558786                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnet.so
+7eff55b65000-7eff55d64000 ---p 00018000 08:05 60558786                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnet.so
+7eff55d64000-7eff55d65000 r--p 00017000 08:05 60558786                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnet.so
+7eff55d65000-7eff55d66000 rw-p 00018000 08:05 60558786                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnet.so
+7eff55d66000-7eff55d78000 r-xp 00000000 08:05 60558787                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnio.so
+7eff55d78000-7eff55f77000 ---p 00012000 08:05 60558787                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnio.so
+7eff55f77000-7eff55f78000 r--p 00011000 08:05 60558787                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnio.so
+7eff55f78000-7eff55f79000 rw-p 00012000 08:05 60558787                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libnio.so
+7eff55f79000-7eff56dfe000 r--s 11bde000 00:2d 4982511134                 /usr/local/bioinfo/src/GATK/gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar
+7eff56dfe000-7eff56dff000 ---p 00000000 00:00 0 
+7eff56dff000-7eff56eff000 rw-p 00000000 00:00 0 
+7eff56eff000-7eff56f02000 ---p 00000000 00:00 0 
+7eff56f02000-7eff57000000 rw-p 00000000 00:00 0 
+7eff57000000-7eff57004000 ---p 00000000 00:00 0 
+7eff57004000-7eff57101000 rw-p 00000000 00:00 0 
+7eff57101000-7eff57105000 ---p 00000000 00:00 0 
+7eff57105000-7eff57202000 rw-p 00000000 00:00 0 
+7eff57202000-7eff57206000 ---p 00000000 00:00 0 
+7eff57206000-7eff57303000 rw-p 00000000 00:00 0 
+7eff57303000-7eff57306000 ---p 00000000 00:00 0 
+7eff57306000-7eff57404000 rw-p 00000000 00:00 0 
+7eff57404000-7eff57407000 ---p 00000000 00:00 0 
+7eff57407000-7eff57505000 rw-p 00000000 00:00 0 
+7eff57505000-7eff57508000 ---p 00000000 00:00 0 
+7eff57508000-7eff57606000 rw-p 00000000 00:00 0 
+7eff57606000-7eff57607000 ---p 00000000 00:00 0 
+7eff57607000-7eff94000000 rw-p 00000000 00:00 0 
+7eff94000000-7eff94021000 rw-p 00000000 00:00 0 
+7eff94021000-7eff98000000 ---p 00000000 00:00 0 
+7eff98000000-7eff98021000 rw-p 00000000 00:00 0 
+7eff98021000-7eff9c000000 ---p 00000000 00:00 0 
+7eff9c000000-7eff9c021000 rw-p 00000000 00:00 0 
+7eff9c021000-7effa0000000 ---p 00000000 00:00 0 
+7effa00fe000-7effa4000000 rw-p 00000000 00:00 0 
+7effa4000000-7effa4021000 rw-p 00000000 00:00 0 
+7effa4021000-7effa8000000 ---p 00000000 00:00 0 
+7effa805a000-7effa835d000 rw-p 00000000 00:00 0 
+7effa835d000-7effa852e000 r--s 044a0000 08:05 60558854                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/rt.jar
+7effa852e000-7effa8ffc000 rw-p 00000000 00:00 0 
+7effa8ffc000-7effa8ffd000 ---p 00000000 00:00 0 
+7effa8ffd000-7effa90fd000 rw-p 00000000 00:00 0 
+7effa90fd000-7effa90fe000 ---p 00000000 00:00 0 
+7effa90fe000-7effa91fe000 rw-p 00000000 00:00 0 
+7effa91fe000-7effa91ff000 ---p 00000000 00:00 0 
+7effa91ff000-7effa92ff000 rw-p 00000000 00:00 0 
+7effa92ff000-7effa9300000 ---p 00000000 00:00 0 
+7effa9300000-7effa9cea000 rw-p 00000000 00:00 0 
+7effa9cea000-7effabbff000 ---p 00000000 00:00 0 
+7effabbff000-7effacfff000 rw-p 00000000 00:00 0 
+7effacfff000-7effad000000 rw-p 00000000 00:00 0 
+7effad000000-7effae620000 rwxp 00000000 00:00 0 
+7effae620000-7effbc000000 ---p 00000000 00:00 0 
+7effbc000000-7effbf8e9000 rw-p 00000000 00:00 0 
+7effbf8e9000-7effc0000000 ---p 00000000 00:00 0 
+7effc0003000-7effc0016000 r--s 00346000 08:05 60558853                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/resources.jar
+7effc0016000-7effc094e000 rw-p 00000000 00:00 0 
+7effc094e000-7effc2864000 ---p 00000000 00:00 0 
+7effc2864000-7effc28bd000 rw-p 00000000 00:00 0 
+7effc28bd000-7effc2c24000 ---p 00000000 00:00 0 
+7effc2c24000-7effc2c2c000 r-xp 00000000 08:05 60558794                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libzip.so
+7effc2c2c000-7effc2e2b000 ---p 00008000 08:05 60558794                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libzip.so
+7effc2e2b000-7effc2e2c000 r--p 00007000 08:05 60558794                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libzip.so
+7effc2e2c000-7effc2e2d000 rw-p 00008000 08:05 60558794                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libzip.so
+7effc2e2d000-7effc2e39000 r-xp 00000000 08:05 58200138                   /usr/lib64/libnss_ldap.so.2
+7effc2e39000-7effc3038000 ---p 0000c000 08:05 58200138                   /usr/lib64/libnss_ldap.so.2
+7effc3038000-7effc3039000 r--p 0000b000 08:05 58200138                   /usr/lib64/libnss_ldap.so.2
+7effc3039000-7effc303a000 rw-p 0000c000 08:05 58200138                   /usr/lib64/libnss_ldap.so.2
+7effc303a000-7effc3046000 r-xp 00000000 08:05 58196625                   /usr/lib64/libnss_files-2.17.so
+7effc3046000-7effc3245000 ---p 0000c000 08:05 58196625                   /usr/lib64/libnss_files-2.17.so
+7effc3245000-7effc3246000 r--p 0000b000 08:05 58196625                   /usr/lib64/libnss_files-2.17.so
+7effc3246000-7effc3247000 rw-p 0000c000 08:05 58196625                   /usr/lib64/libnss_files-2.17.so
+7effc3247000-7effc324d000 rw-p 00000000 00:00 0 
+7effc324d000-7effc3277000 r-xp 00000000 08:05 60558776                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libjava.so
+7effc3277000-7effc3476000 ---p 0002a000 08:05 60558776                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libjava.so
+7effc3476000-7effc3477000 r--p 00029000 08:05 60558776                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libjava.so
+7effc3477000-7effc3479000 rw-p 0002a000 08:05 60558776                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libjava.so
+7effc3479000-7effc3486000 r-xp 00000000 08:05 60558793                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libverify.so
+7effc3486000-7effc3685000 ---p 0000d000 08:05 60558793                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libverify.so
+7effc3685000-7effc3687000 r--p 0000c000 08:05 60558793                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libverify.so
+7effc3687000-7effc3688000 rw-p 0000e000 08:05 60558793                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/libverify.so
+7effc3688000-7effc368f000 r-xp 00000000 08:05 58196637                   /usr/lib64/librt-2.17.so
+7effc368f000-7effc388e000 ---p 00007000 08:05 58196637                   /usr/lib64/librt-2.17.so
+7effc388e000-7effc388f000 r--p 00006000 08:05 58196637                   /usr/lib64/librt-2.17.so
+7effc388f000-7effc3890000 rw-p 00007000 08:05 58196637                   /usr/lib64/librt-2.17.so
+7effc3890000-7effc38a5000 r-xp 00000000 08:05 58195987                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7effc38a5000-7effc3aa4000 ---p 00015000 08:05 58195987                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7effc3aa4000-7effc3aa5000 r--p 00014000 08:05 58195987                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7effc3aa5000-7effc3aa6000 rw-p 00015000 08:05 58195987                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+7effc3aa6000-7effc3ba7000 r-xp 00000000 08:05 58196615                   /usr/lib64/libm-2.17.so
+7effc3ba7000-7effc3da6000 ---p 00101000 08:05 58196615                   /usr/lib64/libm-2.17.so
+7effc3da6000-7effc3da7000 r--p 00100000 08:05 58196615                   /usr/lib64/libm-2.17.so
+7effc3da7000-7effc3da8000 rw-p 00101000 08:05 58196615                   /usr/lib64/libm-2.17.so
+7effc3da8000-7effc3e91000 r-xp 00000000 08:05 58196651                   /usr/lib64/libstdc++.so.6.0.19
+7effc3e91000-7effc4091000 ---p 000e9000 08:05 58196651                   /usr/lib64/libstdc++.so.6.0.19
+7effc4091000-7effc4099000 r--p 000e9000 08:05 58196651                   /usr/lib64/libstdc++.so.6.0.19
+7effc4099000-7effc409b000 rw-p 000f1000 08:05 58196651                   /usr/lib64/libstdc++.so.6.0.19
+7effc409b000-7effc40b0000 rw-p 00000000 00:00 0 
+7effc40b0000-7effc4e3c000 r-xp 00000000 08:05 60558798                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/server/libjvm.so
+7effc4e3c000-7effc503c000 ---p 00d8c000 08:05 60558798                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/server/libjvm.so
+7effc503c000-7effc50e9000 r--p 00d8c000 08:05 60558798                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/server/libjvm.so
+7effc50e9000-7effc5114000 rw-p 00e39000 08:05 60558798                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/server/libjvm.so
+7effc5114000-7effc514a000 rw-p 00000000 00:00 0 
+7effc514a000-7effc530e000 r-xp 00000000 08:05 58196607                   /usr/lib64/libc-2.17.so
+7effc530e000-7effc550d000 ---p 001c4000 08:05 58196607                   /usr/lib64/libc-2.17.so
+7effc550d000-7effc5511000 r--p 001c3000 08:05 58196607                   /usr/lib64/libc-2.17.so
+7effc5511000-7effc5513000 rw-p 001c7000 08:05 58196607                   /usr/lib64/libc-2.17.so
+7effc5513000-7effc5518000 rw-p 00000000 00:00 0 
+7effc5518000-7effc551a000 r-xp 00000000 08:05 58196613                   /usr/lib64/libdl-2.17.so
+7effc551a000-7effc571a000 ---p 00002000 08:05 58196613                   /usr/lib64/libdl-2.17.so
+7effc571a000-7effc571b000 r--p 00002000 08:05 58196613                   /usr/lib64/libdl-2.17.so
+7effc571b000-7effc571c000 rw-p 00003000 08:05 58196613                   /usr/lib64/libdl-2.17.so
+7effc571c000-7effc572a000 r-xp 00000000 08:05 60558763                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/jli/libjli.so
+7effc572a000-7effc5929000 ---p 0000e000 08:05 60558763                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/jli/libjli.so
+7effc5929000-7effc592a000 r--p 0000d000 08:05 60558763                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/jli/libjli.so
+7effc592a000-7effc592b000 rw-p 0000e000 08:05 60558763                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/amd64/jli/libjli.so
+7effc592b000-7effc5940000 r-xp 00000000 08:05 58196738                   /usr/lib64/libz.so.1.2.7
+7effc5940000-7effc5b3f000 ---p 00015000 08:05 58196738                   /usr/lib64/libz.so.1.2.7
+7effc5b3f000-7effc5b40000 r--p 00014000 08:05 58196738                   /usr/lib64/libz.so.1.2.7
+7effc5b40000-7effc5b41000 rw-p 00015000 08:05 58196738                   /usr/lib64/libz.so.1.2.7
+7effc5b41000-7effc5b58000 r-xp 00000000 08:05 58196633                   /usr/lib64/libpthread-2.17.so
+7effc5b58000-7effc5d57000 ---p 00017000 08:05 58196633                   /usr/lib64/libpthread-2.17.so
+7effc5d57000-7effc5d58000 r--p 00016000 08:05 58196633                   /usr/lib64/libpthread-2.17.so
+7effc5d58000-7effc5d59000 rw-p 00017000 08:05 58196633                   /usr/lib64/libpthread-2.17.so
+7effc5d59000-7effc5d5d000 rw-p 00000000 00:00 0 
+7effc5d5d000-7effc5d7f000 r-xp 00000000 08:05 58196600                   /usr/lib64/ld-2.17.so
+7effc5d83000-7effc5d9e000 r--s 003b7000 08:05 60558812                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/ext/cldrdata.jar
+7effc5d9e000-7effc5da9000 r--s 0011d000 08:05 60558815                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/ext/localedata.jar
+7effc5da9000-7effc5dc4000 r--s 001d6000 08:05 60558817                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/ext/nashorn.jar
+7effc5dc4000-7effc5e60000 rw-p 00000000 00:00 0 
+7effc5e60000-7effc5e64000 ---p 00000000 00:00 0 
+7effc5e64000-7effc5f66000 rw-p 00000000 00:00 0 
+7effc5f67000-7effc5f68000 rw-p 00000000 00:00 0 
+7effc5f68000-7effc5f6d000 r--s 000c1000 08:05 60558840                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/jsse.jar
+7effc5f6d000-7effc5f73000 r--s 000f5000 08:05 60558837                   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64/jre/lib/jfr.jar
+7effc5f73000-7effc5f7b000 rw-s 00000000 08:05 27263047                   /tmp/hsperfdata_knam/12484
+7effc5f7b000-7effc5f7c000 rw-p 00000000 00:00 0 
+7effc5f7c000-7effc5f7d000 r--p 00000000 00:00 0 
+7effc5f7d000-7effc5f7e000 rw-p 00000000 00:00 0 
+7effc5f7e000-7effc5f7f000 r--p 00021000 08:05 58196600                   /usr/lib64/ld-2.17.so
+7effc5f7f000-7effc5f80000 rw-p 00022000 08:05 58196600                   /usr/lib64/ld-2.17.so
+7effc5f80000-7effc5f81000 rw-p 00000000 00:00 0 
+7fffe25e3000-7fffe2605000 rw-p 00000000 00:00 0                          [stack]
+7fffe27ac000-7fffe27ae000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=true -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=2 
+java_command: /usr/local/bioinfo/src/GATK/gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar HaplotypeCaller -R /home/knam/work/sfrugi_WG/SNV/ref/sfC.ver7.fa -I /home/knam/work/sfrugi_WG/SNV/bam/FC35.bam -O /home/knam/work/sfrugi_WG/SNV/gvcf/FC35.g.vcf.gz -ERC GVCF
+java_class_path (initial): /usr/local/bioinfo/src/GATK/gatk-4.2.6.1/gatk-package-4.2.6.1-local.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/bioinfo/src/GATK/gatk-4.2.6.1/:/usr/local/bioinfo/src/GATK/gatk-4.2.6.1/scripts/:/tools/bin:/usr/lib64/qt-3.3/bin:/usr/lpp/mmfs/bin/:/tools/perl5/modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/home/knam/bin
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xb57c40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xb57c40], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x9385c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x9385c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x9385c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x9385c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x938470], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x938680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x938680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x938680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x938680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:CentOS Linux release 7.9.2009 (Core)
+
+uname:Linux 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 4096, NOFILE 131072, AS infinity
+load average:47,35 47,09 46,77
+
+/proc/meminfo:
+MemTotal:       263870852 kB
+MemFree:        57585220 kB
+MemAvailable:   213054116 kB
+Buffers:          715280 kB
+Cached:         165601308 kB
+SwapCached:            0 kB
+Active:         91724628 kB
+Inactive:       97672436 kB
+Active(anon):   28682564 kB
+Inactive(anon):   654116 kB
+Active(file):   63042064 kB
+Inactive(file): 97018320 kB
+Unevictable:     4194304 kB
+Mlocked:         4194304 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              2924 kB
+Writeback:             0 kB
+AnonPages:      27275632 kB
+Mapped:          1164556 kB
+Shmem:           6256204 kB
+Slab:            3777668 kB
+SReclaimable:    3398352 kB
+SUnreclaim:       379316 kB
+KernelStack:       34864 kB
+PageTables:        89156 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    131935424 kB
+Committed_AS:   37285616 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:     1736908 kB
+VmallocChunk:   34223616768 kB
+Percpu:            18176 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   5310464 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:     1111332 kB
+DirectMap2M:    37588992 kB
+DirectMap1G:    231735296 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 16-17,48-49
+cpu_memory_nodes: 0-1
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 14789210112
+memory_max_usage_in_bytes: 14798065664
+
+
+CPU:total 64 (initial active 4) (16 cores per cpu, 2 threads per core) family 6 model 79 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1200.219
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 0
+cpu cores	: 16
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1200.476
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 1
+cpu cores	: 16
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 2
+cpu cores	: 16
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1299.810
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 3
+cpu cores	: 16
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1294.683
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 4
+cpu cores	: 16
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1260.845
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 5
+cpu cores	: 16
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2601.287
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 6
+cpu cores	: 16
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1261.614
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 7
+cpu cores	: 16
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 8
+cpu cores	: 16
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 9
+cpu cores	: 16
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 10
+cpu cores	: 16
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 11
+cpu cores	: 16
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 12
+cpu cores	: 16
+apicid		: 24
+initial apicid	: 24
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 13
+cpu cores	: 16
+apicid		: 26
+initial apicid	: 26
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 14
+cpu cores	: 16
+apicid		: 28
+initial apicid	: 28
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2502.593
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 15
+cpu cores	: 16
+apicid		: 30
+initial apicid	: 30
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 0
+cpu cores	: 16
+apicid		: 32
+initial apicid	: 32
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 1
+cpu cores	: 16
+apicid		: 34
+initial apicid	: 34
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 2
+cpu cores	: 16
+apicid		: 36
+initial apicid	: 36
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 3
+cpu cores	: 16
+apicid		: 38
+initial apicid	: 38
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 20
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 4
+cpu cores	: 16
+apicid		: 40
+initial apicid	: 40
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 21
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 5
+cpu cores	: 16
+apicid		: 42
+initial apicid	: 42
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 22
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 6
+cpu cores	: 16
+apicid		: 44
+initial apicid	: 44
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 23
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 7
+cpu cores	: 16
+apicid		: 46
+initial apicid	: 46
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 24
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 8
+cpu cores	: 16
+apicid		: 48
+initial apicid	: 48
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 25
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 9
+cpu cores	: 16
+apicid		: 50
+initial apicid	: 50
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 26
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 10
+cpu cores	: 16
+apicid		: 52
+initial apicid	: 52
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 27
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2595.391
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 11
+cpu cores	: 16
+apicid		: 54
+initial apicid	: 54
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 28
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 12
+cpu cores	: 16
+apicid		: 56
+initial apicid	: 56
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 29
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 13
+cpu cores	: 16
+apicid		: 58
+initial apicid	: 58
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 30
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 14
+cpu cores	: 16
+apicid		: 60
+initial apicid	: 60
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 31
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 15
+cpu cores	: 16
+apicid		: 62
+initial apicid	: 62
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 32
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1209.191
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 0
+cpu cores	: 16
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 33
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1226.623
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 1
+cpu cores	: 16
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 34
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 2
+cpu cores	: 16
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 35
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1299.938
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 3
+cpu cores	: 16
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 36
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1212.268
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 4
+cpu cores	: 16
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 37
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1255.590
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 5
+cpu cores	: 16
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 38
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 6
+cpu cores	: 16
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 39
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 1256.103
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 7
+cpu cores	: 16
+apicid		: 15
+initial apicid	: 15
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 40
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 8
+cpu cores	: 16
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 41
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 9
+cpu cores	: 16
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 42
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 10
+cpu cores	: 16
+apicid		: 21
+initial apicid	: 21
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 43
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 11
+cpu cores	: 16
+apicid		: 23
+initial apicid	: 23
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 44
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 12
+cpu cores	: 16
+apicid		: 25
+initial apicid	: 25
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 45
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 13
+cpu cores	: 16
+apicid		: 27
+initial apicid	: 27
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 46
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 14
+cpu cores	: 16
+apicid		: 29
+initial apicid	: 29
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 47
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 0
+siblings	: 32
+core id		: 15
+cpu cores	: 16
+apicid		: 31
+initial apicid	: 31
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4190.31
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 48
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 0
+cpu cores	: 16
+apicid		: 33
+initial apicid	: 33
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 49
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 1
+cpu cores	: 16
+apicid		: 35
+initial apicid	: 35
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 50
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 2
+cpu cores	: 16
+apicid		: 37
+initial apicid	: 37
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 51
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 3
+cpu cores	: 16
+apicid		: 39
+initial apicid	: 39
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 52
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 4
+cpu cores	: 16
+apicid		: 41
+initial apicid	: 41
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 53
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 5
+cpu cores	: 16
+apicid		: 43
+initial apicid	: 43
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 54
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 6
+cpu cores	: 16
+apicid		: 45
+initial apicid	: 45
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 55
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 7
+cpu cores	: 16
+apicid		: 47
+initial apicid	: 47
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 56
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 8
+cpu cores	: 16
+apicid		: 49
+initial apicid	: 49
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 57
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 9
+cpu cores	: 16
+apicid		: 51
+initial apicid	: 51
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 58
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 10
+cpu cores	: 16
+apicid		: 53
+initial apicid	: 53
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 59
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2595.776
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 11
+cpu cores	: 16
+apicid		: 55
+initial apicid	: 55
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 60
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 12
+cpu cores	: 16
+apicid		: 57
+initial apicid	: 57
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 61
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2599.877
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 13
+cpu cores	: 16
+apicid		: 59
+initial apicid	: 59
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 62
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 14
+cpu cores	: 16
+apicid		: 61
+initial apicid	: 61
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 63
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz
+stepping	: 1
+microcode	: 0xb000038
+cpu MHz		: 2499.902
+cache size	: 40960 KB
+physical id	: 1
+siblings	: 32
+core id		: 15
+cpu cores	: 16
+apicid		: 63
+initial apicid	: 63
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 invpcid_single intel_ppin intel_pt ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts md_clear spec_ctrl intel_stibp flush_l1d
+bogomips	: 4196.79
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 263870852k(57585220k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.262-b10) for linux-amd64 JRE (1.8.0_262-b10), built on Oct  1 2020 17:07:44 by "mockbuild" with gcc 4.8.5 20150623 (Red Hat 4.8.5-44)
+
+time: Thu Oct 19 12:30:26 2023
+timezone: CEST
+elapsed time: 616850 seconds (7d 3h 20m 50s)
+

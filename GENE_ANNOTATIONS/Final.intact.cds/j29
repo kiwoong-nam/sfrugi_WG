@@ -1,0 +1,9 @@
+#!/bin/bash
+
+zcat /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/seq/assembly/FC_104.fa.gz > /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa
+
+gffread /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/gff/FC_104.gff -g /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa -x /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/FC_104.cds.fa
+
+rm /home/kiwoong/Projects/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/cds/temp.fa*
+
+

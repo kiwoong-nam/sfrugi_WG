@@ -1,0 +1,8 @@
+#!/bin/bash
+
+zcat /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/seq/assembly/FC_85.fa.gz > /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/filter_pseudo/cds/temp.fa
+
+/home/knam/save/programs/gffread/gffread /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/filter_pseudo/gff/FC_85.gff -g /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/filter_pseudo/cds/temp.fa -x /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/filter_pseudo/cds/FC_85.cds.fa
+
+rm /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/Final/intact/filter_pseudo/cds/temp.fa*
+

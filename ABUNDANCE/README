@@ -1,0 +1,17 @@
+ABUNDANCE
+
+###########################
+Propensity.SNV.sh
+	F: calculation of # of SNVs in 100 kb windows
+	O: Propensity/SNV.windowed.p
+Propensity.CNV_Gene.pl	
+	F: calculation of the length of mRNA in 100 kb windows
+	O: Propensity/CNV_Gene.txt
+Propensity.Table.R
+	F: average length of mRNA with CNV in genomes
+	O: Propensity/Table.mean.txt
+Propensity.vis.R
+	F: visualization of the table above
+	O: Propensity.pdf
+##finish	
+

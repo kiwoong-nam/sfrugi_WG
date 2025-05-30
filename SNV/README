@@ -1,0 +1,45 @@
+SNV
+
+ref.index.sh
+	F: Indexing the reference genomes for minimap2
+	O: ref/sfC.ver7.mmi
+ref.index.1.sh
+	F: Indexing the reference genomes for gatk
+	O: ref/sfC.ver7.dict
+	
+mapping/j*
+	F: mapping of reads agains the reference genomes
+	O: bam/*.bam
+	
+gvcf/j*
+	F: haplotype calling
+	O: gvcf/*.g.vcf.gz
+		
+merge.vcf.sh
+	F: merging gvcf files into one
+	O: gvcf/FC.g.vcf.gz
+
+variant_calling.sh
+	F: Peforms variant calling
+	O: vcf/FC.vcf.gz
+	
+variant_filteration.sh
+	F: Filteration of variations
+	O: FC.filtered.vcf.gz
+
+splitvcf/j*
+	F: splits the vcf file for each sample
+	O: vcf/bysample/*vcf
+
+phasing/j*
+	F: Peformes phasing
+	O: vcf/bysample/*.phased.vcf.gz
+	
+vcfmerge.sample.vcf.sh
+	F: merging phased vcf files
+	O: vcf/FC.filtered.phased.vcf.gz
+	
+variant_SNPcollect.sh
+	F: Collect only SNVs
+	O: vcf/FC.filtered.phased.vcf.gz
+

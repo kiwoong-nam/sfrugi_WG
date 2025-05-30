@@ -1,0 +1,96 @@
+CNV_Gene
+
+########################
+
+busco.count_geneIDs.pl
+	F: Listing the samples for each busco genes with redundancy
+	O: busco/buscoID
+busco.count_geneIDs_copies.pl
+	F: Counting # of copy for each busco gene for each sample
+	O: busco/buscoID_copies
+busco.AFS_secoldallele.pl
+	F: Counting the # of samples with alternative copy number for busco genes
+	O: busco/busco_secondallele
+busco.AFS_secoldallele.vis.R
+	F: visualization of the result above
+	O: busco_secondallele.pdf
+busco.AFS_maxcopy.pl
+	F: extracting the BUSCO genes filtered out
+	O: busco/busco_maxcopy
+
+counts.geneIDs.pl
+	F: Listing the samples for each ogs genes with redundancy
+	O: counts/geneID
+counts.geneIDs_copies.pl
+	F: Counting # of copy for each ogs gene for each sample
+	O: counts/geneID_copies
+
+CNV.identifier.pl
+	F: listing CNV and uniq with the consideration of potential misassembly
+	O: CNV/list.txt
+CNV.summary.sh
+	F: counting of CNV genes and uniq genes and extracting them
+	O: CNV/CNV_counts, CNV/CNV.txt, CNV/noCNV.txt
+
+TE.repeatmodeler.sh
+	F: Running repeatModeler
+	O: TE/repeatmodeler/RM_2475944.ThuNov282041512024/consensi.fa.classified
+	
+TE.repeatmasker.sample/j*	
+	F: Running RepeatMasker for each sample	
+	O: TE/repeatmasker/F/F*.fa.out
+
+TE.repeatmasker.ref.sh
+	F: Running RepeatMasker for ver7
+	O: TE/repeatmasker/ver7*/sfC.ver7.fa.out, TE/repeatmasker/ncbi_RepeatModeler/GCF_023101765.2_AGI-APGP_CSIRO_Sfru_2.0_genomic.fna.tbl
+	
+TE.abundance.index.pl	
+	F: generate index files for each assembly
+	O: TE/abundance/index/*
+TE.abundance.count.pl
+	F: calculate the length of TE for each family
+	O: TE/abundance/count
+TE.abundance.mean.R
+	F: calculate the average length of TE for each family
+	O: TE/abundance/mean	
+
+Selfing.CNVptn.pl
+	F: Extract ptn sequences of CNV genes
+	O: Selfing/CNVptn.fa
+Selfing.blastp.sh
+	F: All-to-all blastp
+	O: Selfing/Selfing
+Selfing.multigene.R
+	F: Finding similar proteins within CNV protein sequences
+	O: Selfing/multigene.txt
+Selfing.grouping.pl
+	F: Generating list of dissimilar groups of CNV genes
+	O: Selfing/Grouppings.txt
+							
+CNVTE.proportion.pl
+	F: calculate % of TE within gene
+	O: CNVTE/proportion.txt
+CNVTE.proportion.vis.R
+	F: Visualization of above
+	O: CNVTE.proportion.pdf
+CNVTE.groups.pl	
+	F: Grouping of the CNV genes with a information of TE
+	O: CNVTE/groups	
+CNVTE.groups_funtion.pl
+	F: Adding the funtion of genes to the group
+	O: CNVTE/groups_function, CNVTE/groups_function.list
+NA
+	F: Manual curation of genes
+	O: CNVTE/groups_function_curated, CNVTE/Numbers
+CNVTE.list.pl
+	F: Generating list of CNV.TE,CNV.Gene, nonCNV.TE, nonCNV.GENE, EXCL
+	O: CNVTE/list.txt
+CNVTE.counts.R
+	F: Counting the numbers of CNV.TE,CNV.Gene, nonCNV.TE, nonCNV.GENE
+	O: CNVTE/counts.txt
+CNVTE.cnvGlisting.pl   
+	F: listing CNV genes with function
+	O: CNVTE/cnvGlisting.txt
+	
+# FINISH
+

@@ -1,0 +1,64 @@
+SYNTHENY
+
+DAGChainer.seqfx.pl
+	F: Fix the sequence format for DAGChainer
+	O: DAGChainer/fx/*.fa
+DAGChainer.blast.sh
+	F: Blast all by all of frugiperda agains litura or exigua
+	O: DAGChainer/fx/allvsall.*
+DAGChainer.exigua.pos.pl
+	F: Extract gene positions of exigua
+	O: DAGChainer/input/exigua.pos
+DAGChainer.frugiperdapos.pl
+	F: Extract gene positions of frugiperda
+	O: DAGChainer/input/frugiperda.pos
+DAGChainer.liturapos.pl
+	F: Extract gene positions of litura
+	O: DAGChainer/input/litura.pos
+DAGChainer.inputmaker.pl
+	F: Making input files for DAGChainer
+	O: DAGChainer/input/pairwise_blast*
+DAGChainer.exec.sh
+	F: executing DAGChainer
+	O: DAGChainer/input/pairwise_blast.*.aligncoords
+
+Grouping.BUSCO_blast.sh
+	F: Blasting BUSCO genes against ref
+	O: Grouping/BUSCO_Blast/busco.blastP
+Grouping.BUSCO_genes.pl
+	F: Finding BUSCO genes from the blast
+	O: Grouping/BUSCO_genes
+Grouping.DAGChainer.pl
+	F: Extracting DAGChainer result concerning BUSCO genes
+	O: Grouping/DAGChainer/pairwise_blast.aligncoords.BUSCO.*
+Grouping.OrthoChr.pl
+	F: Finding orthologus chromosomes from BUSCO genes and testing deviation from conserved chromosome
+	O: Grouping/OrthoChr/BUSCO.orthochrom.*, Grouping/OrthoChr/BUSCO.deviation.*
+
+Gene.input.pl
+	F: Extracting chromosomes for each gene
+	O: Gene/input/*
+Gene.all.chrN.pl
+	F: Finding chromosome of each gene within orthologous
+	O: Gene/all/chrN
+Gene.all.IntronN.pl
+	F: Finding intron number of each gene within orthologous
+	O: Gene/all/intronN
+Gene.all.merge.pl
+	F: Merging intron number and chromosome
+	O: Gene/all/counting
+Gene.all.counting.R
+	F: Performs fisher's exact test and finding 95% bootstrapping confidence intervals rom the above
+	O: Gene/all/mean
+Gene.all.intronloss.pl
+	F: Counting # of intronless genes for CNV-homologs and nonCNV-homolgs in CNV-containing orthogroup and that in CNV-noncontaining orthogroup
+	O: Gene/all/tointronless
+Gene.all.intronloss.counting.R
+	F: Performs fisher's exact test and finding 95% bootstrapping confidence intervals rom the above
+	O: Gene/all/mean.intronloss
+Gene.vis.R
+	F: Visualization of above
+	O: Gene.pdf
+	
+
+

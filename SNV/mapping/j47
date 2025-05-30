@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -c 8
+
+module load bioinfo/minimap2-2.19
+
+cd /work/knam/sfrugi_WG/SNV/ref
+
+minimap2 -a -t 8 -x map-hifi sfC.ver7.mmi /work/knam/sfrugi_WG/SNV/rawreads/sfR/FR_20_HiFi.fastq.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o ../bam/FR_20.raw.bam
+
+cd ../bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o FR_20.sorted.bam FR_20.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.FR_20 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=FR_20.sorted.bam OUTPUT=FR_20.bam RGID=FR_20 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=FR_20;
+
+rm -rf temp.FR_20
+rm FR_20.metricN.log
+rm FR_20.raw.bam
+rm FR_20.sorted.bam
+
+/home/knam/save/programs/samtools-1.9/samtools index FR_20.bam

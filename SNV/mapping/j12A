@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -c 8
+
+cd /home/knam/work/sfrugi_WG/SNV/ref
+
+/home/knam/save/programs/minimap2-2.19_x64-linux/minimap2 -a -t 8 -x map-hifi sfC.ver7.mmi /home/knam/work/sfrugi_WG/SNV/rawreads/sfC/FC_98_HiFi.fastq.gz | /home/knam/save/programs/samtools-1.9/samtools view -b -h -o ../bam/FC_98.raw.bam
+
+cd ../bam
+
+/home/knam/save/programs/samtools-1.9/samtools sort -o FC_98.sorted.bam FC_98.raw.bam
+
+java -Xmx4g -Djava.io.tmpdir=temp.FC_98 -jar /home/knam/save/programs/picard.jar AddOrReplaceReadGroups INPUT=FC_98.sorted.bam OUTPUT=FC_98.bam RGID=FC_98 RGLB=lib1 RGPL=illumina RGPU=unit1 RGSM=FC_98;
+
+/home/knam/save/programs/samtools-1.9/samtools index FC_98.bam
+
+#rm -rf temp.FC_98
+#rm FC_98.metricN.log
+#rm FC_98.raw.bam
+#rm FC_98.sorted.bam
+

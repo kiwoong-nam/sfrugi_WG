@@ -1,0 +1,21 @@
+Ver7
+
+readdepth.sh
+	F: extracting the read depth of the mapping against ver7 reference genome
+	O: readdepth/*gz
+Gene.RP.pl
+	F: calculate the read depth for each gene and the whole genome
+	O: Gene/RP.txt
+Gene.CNV.pl
+	F: Finding the CNV info from the above
+	O: Gene/CNV.txt
+Gene.Stats.R
+	F: permutation test to compare the read depth between CNVs and non-CNV genes
+	O: Gene/Stats.txt
+Gene.Cov.R
+	F: calculating mean and 95% bootstrapping intervals of the read depth of CNV an non-CNV genes
+	O: Gene/Cov.txt
+vis.R
+	F: Visulation the above
+	O: Cov.pdf
+	

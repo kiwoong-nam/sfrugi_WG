@@ -1,0 +1,87 @@
+POSITION
+
+###########################
+
+chromosome.dupl.pl
+	F: Finding the contings with CNV genes
+	O: chromosome/dupl
+chromosome.chromosome.pl
+	F: Finding the chromomosomes with CNV genes
+	O: chromosome/chromosome/*
+chromosome.cochr.pl
+	F: Finding intra or inter chromosomal CNVs
+	O: chromosome/cochr/*
+chromosome.Count.copy.pl
+	F: Calculating the involved copy numbers of CNVs 	
+	O: chromosome/Count/copy.txt
+chromosome.Count.perm.pl
+	F: permutation test to test differences in the involved copy numbers of CNVs between inter & intra chromosomal CNVs
+	O: chromosome/Count/perm.txt
+chromosome.Count.freq.pl
+	F: Counting the number of inter & intra chromosomal CNVs
+	O: chromosome/Count/freq.txt		
+chromosome.Count.vis.R
+	F: Visualization of the above
+	O: chromosome.Count.Freq.pdf
+	
+	
+chromosome.Count.Intronlessfreq.pl
+	F: Counting the number of inter & intra chromosomal CNVs from genes with introns or without intron
+	O: chromosome/Count/Intronlessfreq.txt
+chromosome.Count.Intronlessstats.R
+	F: FS test to compare % of intra chromosomal duplications between intronic and intronless genes
+	O: chromosome/Count/Intronlessstats.txt
+chromosome.Count.vis.Intronless.R
+	F: Visualization of above
+	O: chromosome.Count.Freq.pdf
+
+Intronless.count.pl
+	F: Count # of introns for each gene from ver7
+	O: Intronless/count.txt
+Intronless.prop.pl
+	F: Calculate the mean and CI of intronless genes for each chr
+	O: Intronless/prop.txt
+	
+distri.CNV_prop.pl
+	F: Calculate proportion of CNV genes for each sample
+	O: distri/CNV_prop.txt
+distri.CNV_mean.R
+	F: Calculate mean proportion of CNV genes across the samples
+	O: distri/CNV_mean.txt
+distri.SNV_prop.pl
+	F: Calculate SNV density for each sample
+	O: distri/SNV_prop.tx
+distri.SNV_mean.R
+	F: Calculate mean SNV density across the samples
+	O: distri/SNV_mean.txt
+distri.TE_collect.pl
+	F: Calculate TE density for each sample
+	O: distri/TE_leng.txt
+distri.TE_mean.R
+	F: Calculate mean TE density across the samples
+	O: distri/TE_mean.[total|LINE].txt
+distri.r2.pl
+	F: calci r2 for each chromosome
+	O: distri/r2/*.hap.ld
+distri.r2_summary.pl
+	F: collect r2 result
+	O: distri/r2_summary
+distri.r2_mean.pl
+	F: calc mean r2 for each chromosome with 95% bootrapping confidence intervals
+	O: distri/r2_mean
+distri.CDS_Density.pl
+	F: calc CDS density
+	O: distri/CDS_Density.txt
+distri.CDS_mean.pl
+	F: calc mean CDS density and 95% bootrapping confidence intervals
+	O: distri/CDS_mean.txt
+distri.merged.R
+	F: merging the tables
+	O: distri/merged.txt
+distri.stats.R
+	F: statitiscal test
+	O: NA
+distri.vis.R
+	F: Visualization of above
+	O: *.pdf
+

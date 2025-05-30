@@ -1,0 +1,10 @@
+[M::mp_idx_restore@0.157*0.82] loaded the index
+[M::mp_idx_print_stat] 2254769 distinct k-mers; mean occ of infrequent k-mers: 63.98; 3 frequent k-mers accounting for 65862 occurrences
+[M::worker_pipeline::6.920*7.68] mapped 3579 sequences
+[M::worker_pipeline::13.661*7.59] mapped 3600 sequences
+[M::worker_pipeline::19.590*7.68] mapped 3728 sequences
+[M::worker_pipeline::25.661*7.71] mapped 3681 sequences
+[M::worker_pipeline::25.672*7.71] mapped 91 sequences
+[M::main] Version: 0.13-r248
+[M::main] CMD: /home/knam/save/programs/miniprot/miniprot --gff -t8 /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/miniprot/library/FC81 /home/knam/work/sfrugi_WG/RefSeq/uniq_gene.fa
+[M::main] Real time: 25.693 sec; CPU: 198.000 sec; Peak RSS: 1.791 GB

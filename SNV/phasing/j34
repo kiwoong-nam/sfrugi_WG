@@ -1,0 +1,7 @@
+#!/bin/bash
+#SBATCH --mem=150G
+
+cd /home/knam/work/sfrugi_WG/SNV/vcf/bysample
+
+/home/knam/save/programs/hiphase-v1.4.0-x86_64-unknown-linux-gnu/hiphase --bam /home/knam/work/sfrugi_WG/SNV/bam/FC_95.bam --vcf FC_95.vcf.gz --output-vcf FC_95.phased.vcf.gz --reference /home/knam/work/sfrugi_WG/SNV/ref/sfC.ver7.fa
+

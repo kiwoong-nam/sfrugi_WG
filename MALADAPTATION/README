@@ -1,0 +1,86 @@
+MALADAPTATION
+
+Annotation.miniprot.sh
+	F: running miniprot on ver7
+	O: Annotation/ver7.gff	
+Annotation.filter.pl
+	F: Filtering the gff file
+	O: Annotation/ver7.filtered.gff
+Annotation.filterCDS.sh
+	F: Extracting CDS from the filtered gff
+	O: Annotation/sfC.cds.fa
+Annotation.stopcodon.pl
+	F: Finding stop codons from above
+	O: Annotation/stopcodons.txt
+Annotation.final.pl
+	F: Producing final gff fime
+	O: Annotation/ver7.final.gff 	
+Annotation.ptn_cds.sh
+	F: Extracting CDS from the final gff
+	O: Annotation/sfC.final.cds.fa, Annotation/sfC.final.ptn.fa,  
+Annotation.count.pl
+	F: Counting genes from the gff file
+	O: Annotation/count.txt
+
+pNpS.count.pl
+	F: counting polymorphic nonsense and syn variations
+	O: pNpS/counts
+pNpS.mean.R
+	F: Calculating mean and 95% CI from the above
+	O: pNpS/mean
+pNpS.stats.R
+	F: fisher's exact test to compare pNpS between CNV and nonCNV
+	O: NA
+pNpS.orthology.FAW.pl
+	F: counting polymorphic nonsense and syn variations with the information of orthogroups with CNVs and witout CNVs in FAW
+	O: pNpS/orthology.FAW
+pNpS.orthology.exigua.pl
+	F: counting polymorphic nonsense and syn variations with the information of orthogroups with CNVs and witout CNVs in S. exigua
+	O: pNpS/orthology.exigua
+pNpS.orthology.mean.R
+	F: Calculating mean and 95% CI from the above
+	O: pNpS/orthology.mean
+pNpS.orthology.stats.R
+	F: FS test and permutation test
+	O: NA
+		
+AFS.count.pl
+	F: counting AFS
+	O: AFS/counts
+AFS.mean.pl
+	F: Calculating mean and 95% CI from the above
+	O: AFS/mean
+
+NSSites.seq.pl
+	F: removing last codons of coding sequences
+	O: NSSSites/seq/*fa
+NSSites.codeml.sh
+	F: running codeml to calculate N and NS sites
+	O: NSSSites/res/g*.codeml	
+NSSites.sites.pl
+	F: Collect codeml result
+	O: NSSSites/sites.txt
+NSSites.mean.R
+	F: Calculate average frequency for each x
+	O: NSSSites/mean.txt
+NSSites.clean.sh
+	F: removing unnecessary files from codeml
+	O: NA
+	
+pNpS_indi.count.pl
+	F: Counting # of nonsynonymous and synonymous heterozygous position for each sample
+	O: pNpS_indi/counts/*
+pNpS_indi.mean.pl
+	F: Counting the mean number of nonsynonymous and synonymous heterozygous position for each sample
+	O: pNpS_indi/[mean|contingency]
+pNpS_indi.stats.R
+	F: Fisher's exact test
+	O: pNpS_indi/FS_test.stats
+pNpS_indi.vis.R
+	F: Visualization of above
+	O: pNpS_indi.pdf
+vis.R
+	F: Visualization 2
+	O: MALADAPTATION.pdf
+
+	

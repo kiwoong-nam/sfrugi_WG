@@ -1,0 +1,14 @@
+#!/bin/bash
+
+module load bioinfo/samtools/1.14
+module load devel/python/Python-3.11.1 devel/java/17.0.6
+module load bioinfo/GATK/4.2.6.1
+module load bioinfo/VCFtools/0.1.16
+
+export PERL5LIB=/home/knam/save/programs/vcftools_0.1.13/perl
+
+cd /home/knam/work/sfrugi_WG/SNV/vcf/bysample
+
+/home/knam/save/programs/vcftools_0.1.13/bin/vcf-subset -c FR_LS ../FC.filtered.vcf.gz | /home/knam/save/programs/samtools-1.9/htslib-1.9/bgzip -f > FR_LS.vcf.gz
+/home/knam/save/programs/samtools-1.9/htslib-1.9/tabix -p vcf FR_LS.vcf.gz
+

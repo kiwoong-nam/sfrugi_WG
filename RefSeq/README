@@ -1,0 +1,12 @@
+RefSeq
+
+###
+uniq_id.pl
+	F: Finding uniq protein sequence ID for each gene
+	O: uniq_id.txt
+
+uniq_gene.pl
+	F: extracting uniq protein sequence for each gene
+	O: uniq_gene.fa	
+
+	

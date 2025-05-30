@@ -1,0 +1,119 @@
+TRANSPOSITION
+
+listing.list.pl
+	F: listing genes for each sample
+	O: listing/list/*
+
+structure.count.pl
+	F: Finding gene length and intron numbers from each sample
+	O: structure/count/*
+structure.length.pl
+	F: calculte mean gene length
+	O: structure/length.txt
+structure.length.stats.R
+	F: wilcox test to compare gene length
+	O: structure/length.stats
+structure.length.vis.R
+	F: visualization for gene length
+	O: structure.length.pdf
+structure.length_singleexon.pl
+	F: calculte mean gene length from intronless gene
+	O: structure/length_singleexon.txt
+structure.length_singleexon.stats.R
+	F: wilcox test to compare gene length from intronless gene
+	O: structure/length_singleexon.stats
+structure.length_singleexon.vis.R
+	F: visualization for gene length from intronless gene
+	O: structure.length_singleexon.pdf
+structure.propintronless.pl
+	F: calculte the proportion of intronless genes
+	O: structure/propintronless.txt
+structure.propintronless.stats.R
+	F: wilcox test to compare the proportion of intronless genes
+	O: structure/propintronless.stats
+structure.propintronless.vis.R
+	F: visualization for the proportion of intronless genes
+	O: structure.propintronless.pdf
+structure.intronN.pl
+	F: calculte the mean intron numbers
+	O: structure/intronN.txt
+structure.intronN.stats.R
+	F: wilcox test to compare intron numbers
+	O: structure/intronN.stats
+structure.intronN.vis.R
+	F: isualization for intron numbers
+	O: structure.intronN.pdf
+	
+Ortho.OrthoFinder.prepID.pl
+	F: extract one protein ID for each gene
+	O:Ortho/OrthoFinder/input/*list
+Ortho.OrthoFinder.prepseq.pl
+	F: Prep of protein sequences for OrthoFinder
+	O: Ortho/OrthoFinder/input/*fa
+Ortho.OrthoFinder.exec.sh
+	F: Execution of OrthoFinder
+	O: Ortho/OrthoFinder/res/Results_Nov26/*
+	
+Flankingseq.seq.pl
+	F: Extraction of 1kb flanking sequences of genes
+	O: Flankingseq/seqs/*
+Flankingseq.retro.pl
+	F: Identification of retro-copies
+	O: Flankingseq/retro/*
+Flankingseq.retro.gene.pl
+	F: Gether information of genes with retro-structure
+	O: Flankingseq/retro.gene
+Flankingseq.retro.mean.R
+	F: Calculate the frequency of retro-structure for CNV or non CNV for intronic or intronless genes
+	O: Flankingseq/retro.gene.mean
+Flankingseq.retro.stats.R
+	F: statistical test to compare the frequency of retro-structure between CNV and non CNV for intronic or intronless genes
+	O: Flankingseq/retro.gene.stats
+Flankingseq.retro.vis.R
+	F: Visualization of above
+	O: Flankingseq.retro.pdf
+
+divergence.beforealign.pl
+	F: prep of sequences of CNV copies for alignment
+	O: divergence/beforealign/*fa			
+divergence.prank/j*
+	F: Execution of prank for alignment
+	O: divergence/afteralign/*fas
+divergence.gblocks.pl
+	F: execution of Gblocks
+	O: divergence/afteralign/*gb
+divergence.divergence.pl
+	F: Calculation of divergence between pairs of copies
+	O: divergence/divergence.txt
+divergence.mean_divergence.R
+	F: Calculate mean and 95% intervals of the divergence for each codon
+	O: divergence/mean_divergence.txt
+divergence.vis.R
+	F: Visualization of above
+	O: divergence.pdf
+
+5UTR.beforealign.pl
+	F: Prep of sequence of 100bp upstream of coding sequences
+	O: 5UTR/beforealign/*fa
+5UTR.prank.sh
+	F: execution of prank for alignment
+	O: 5UTR/afteralign/*fas
+5UTR.divergence.pl
+	F: calculation of the minimum divergence among pairs of copies within sampmes
+	O: 5UTR/divergence.txt
+5UTR.vis.R
+	F: visualization of above
+	O: 5UTR.pdf
+
+Transducing.distTEGene.pl
+	F: Calc the distance of each gene to the nearst LINE
+	O: Transducing/distTEGene/*
+Transducing.mean.pl
+	F: Calc the proportion of LINE-induced genes for CNV and non-CNV genes (< 100bp)
+	O: Transducing/[mean|contingency]
+Transducing.stats.R
+	F: Fisher's exact test
+	O: Transducing/FS_test.stats
+Transducing.vis.R
+	F: Visualization of above
+	O: Transducing.pdf	

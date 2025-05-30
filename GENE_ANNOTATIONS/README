@@ -1,0 +1,60 @@
+GENE_ANNOTATIONS
+
+##################################
+
+miniprot.library.pl
+	F: Generating libraries 
+	O: miniprot/library/*
+miniprot.exec.refseq/j*
+	F: execution of miniprot from RefSeq
+	O: miniprot/refseq/raw/*gff
+miniprot.filter.refseq.pl
+	F: filteration of miniprot from RefSeq
+	O: miniprot/refseq/filtered/*/*gff
+miniprot.F.busco.sh
+	F: execution of miniprot from lepidoptera_odb10 BUSCO
+	O: miniprot/busco/*gff
+
+Final.all.pl
+	F: Removing mapping with the same start or ending positions
+	O: Final/all/*gff
+Final.intact.filter_pseudo.gff.pl
+	F: Removing of mapping including Frameshift or Stopcodons
+	O: Final/intact/filter_pseudo/gff
+Final.intact.filter_pseudo.cds/j*
+	F: Extraction of CDS from the above
+	O: Final/intact/filter_pseudo/cds/*.cds.fa	
+Final.intact.filter_pseudo.stopcodons.pl
+	F: Listing the list of CDS with stop codons from the above
+	O: Final/intact/filter_pseudo/stopcodons.txt
+Final.intact.filter_pseudo.discard2.pl
+	F: Removing sequences with internal stopcodons
+	O: Final/intact/gff/*gff
+Final.intact.cds/j*
+	F: Extraction of CDS from the final intact gff files
+	O: Final/intact/cds/*.cds.fa
+Final.stopcodonchecker.pl
+	F: Checking the presence of internal stop codons
+	O: NA
+	
+counts.busco.pl
+	F: Counting # of mapped lepidoptera_odb10 BUSCO genes
+	O: counts/busco.txt	
+counts.refseq.pl
+	F: Counting # of ref gene in the gff files
+	O: counts/refseq.txt
+counts.vis.R
+	F: visualization of above
+	O: counts.pdf
+
+Stats.collect.pl
+	F: Collect identify and coverage of the mappings
+	O: Stats/collect.txt
+Stats.mean.R
+	F: Collect mean identify and coverage
+	O: Stats/mean.txt
+Stats.vis.R
+	F: Visualization of 'collect.txt'
+	O: Stats.pdf
+
+

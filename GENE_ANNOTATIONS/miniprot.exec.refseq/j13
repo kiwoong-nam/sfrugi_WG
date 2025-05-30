@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#SBATCH -c 8
+#SBATCH --mem=50G
+
+cd /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/miniprot/refseq/raw
+/home/knam/save/programs/miniprot/miniprot --gff -t8 /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/miniprot/library/FC71 /home/knam/work/sfrugi_WG/RefSeq/uniq_gene.fa > FC71.gff
+

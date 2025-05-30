@@ -1,0 +1,73 @@
+TRANSCRIPTION
+
+Seqs.CNV_nonCNV.pl
+	F: Get 300bp upstream flanking sequences of CNV and nonCNV genes
+	O: Seqs/[CNV|nonCNV]/*
+
+TATA.counts.pl
+	F: Finding TATA sequences
+	O: TATA/counts/[CNV|nonCNV]/*
+
+TATA.mean.pl
+	F: calc mean and 95% of TATA-genes
+	O: TATA/mean
+	
+TATA.calcP.pl
+	F: Calc p values of overpresentation of TATA genes in CNV or nonCNV genes
+	O: TATA/calcP
+	
+TATA.calcP_fdr.pl
+	F: performs multiple testing correction
+	O: TATA/calcP_fdr
+
+TATA.vis.R
+	F: visualization of the results
+	O: TATA.[CNV|nonCNV].pdf
+
+	
+UTR.ver7.blasting.db.sh
+	F: generate db for blast
+	O: UTR/ver7/blasting/ver7
+UTR.ver7.blasting.CNV.sh
+	F: blasting of the 300bp upstream flanking sequences of CNV genes against ver7
+	O: UTR/ver7/blasting/CNV/*gz
+UTR.ver7.blasting.nonCNV.sh
+	F: blasting of the 300bp upstream flanking sequences of nonCNV genes against ver7
+	O: UTR/ver7/blasting/nonCNV/*gz
+UTR.ver7.blasting.nonredundance.CNV.pl
+ 	F: identify non-redundant flanking sequences within ver7 for CNV
+ 	O: UTR/ver7/blasting/nonredundance.CNV.pos 	
+UTR.ver7.blasting.nonredundance.nonCNV.pl
+ 	F: identify non-redundant flanking sequences within ver7 for nonCNV
+ 	O: UTR/ver7/blasting/nonredundance.nonCNV.pos 	
+UTR.ref.sh
+	F: indexing the ver7 ref genome
+	O: UTR/ref/ver7*
+UTR.mapping.sh
+	F: mapping of reads againt ver7
+	O: UTR/mapping/*bam
+UTR.readdepth.counts.sh
+	F: calculating the read depth
+	O: UTR/readdepth/counts/[SAMPLE_NAME].gz
+UTR.readdepth.bed.pl
+	F: Generating bed files with different functional categories
+	O: UTR/readdepth/bed/*bed
+UTR.readdepth.splitting.pl
+	F: spliting the read count files according to the functional categories
+	O: UTR/readdepth/counts/[SAMPLE_NAME].*.gz
+UTR.mean.pl
+	F: calculating the % of mapped sequences for each functional category
+	O: UTR/mean.txt
+UTR.global.pl
+	F: calculating the length of mapped sequences for each functional category
+	O: UTR/global.txt
+(tobedone)UTR.stats.R
+	F: Fisher's exact test to compare the % of mapped reads between [CDS_CNV|CDS_nonCNV|Upstream.CNV|Upstream.nonCNV]
+	O: UTR/stats.txt
+Vis.R
+	F: Visualization of the results
+	O: [Prop|Hist].pdf
+	
+FINISH!!! 
+
+
