@@ -3,39 +3,39 @@
 
 The scripts used in this study are grouped into the following directories, reflecting the original working environments:
 
-Assembling
+Assembling:
  For the generation of individually assembled genomes.
 
-RefSeq
+RefSeq:
   Treatment of RefSeq data
   
-GENE_ANNOTATIONS
+GENE_ANNOTATIONS:
  Gene annotation for each genome assembly.
 
-SNV
+SNV:
  Identification of single nucleotide variations.
 
-CNV_Gene
+CNV_Gene:
  Identification of iORF-CNVs.
 
-Ver7
+Ver7:
  Comparison of read depths between iORF-CNVs and other genes.
 
-ABUNDANCE
+ABUNDANCE:
  Calculation of the abundance of iORF-CNVs and SNVs.
 
-POSITION
+POSITION:
  Analysis of the genomic positions of iORF-CNV genes.
 
-TRANSPOSITION
+TRANSPOSITION:
  Testing retrotransposition as a potential origin of iORF-CNVs.
 
-MALADAPTATION
+MALADAPTATION:
  Investigation of selective forces acting on iORF-CNV copies.
 
-TRANSCRIPTION
+TRANSCRIPTION:
  Analysis of transcriptional mechanisms of iORF-CNVs.
 
-SYNTHENY
+SYNTHENY:
  Testing the conservation of synteny in potential iORF-CNVs.
 
