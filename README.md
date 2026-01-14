@@ -39,3 +39,20 @@ TRANSCRIPTION:
 SYNTHENY:
  Testing the conservation of synteny in potential iORF-CNVs.
 
+TRANSPOSITION_short
+  Testing if iORF-CNVs have higher proportion of intronless genes than non-iORF-CNVs for each length bin
+
+GenomeSize
+  Comparision of assembly sizes according to the sex
+
+iORF_CNV_Coord
+  listing iORF-CNVs
+    
+Quanti
+  Quantification of iORF-CNVs with support for retrotransposition
+  
+    
+drwxrwxr-x  4 kiwoong kiwoong  4096 déc.  16 10:59  TRANSPOSITION_short
+drwxrwxr-x  6 kiwoong kiwoong  4096 déc.  16 16:33  
+			
+

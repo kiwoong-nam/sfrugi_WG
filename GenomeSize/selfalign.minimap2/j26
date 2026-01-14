@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -c 8
+
+module load bioinfo/Minimap/2-2.28
+
+cd /home/knam/work/sfrugi_WG/GenomeSize/selfalign/paf
+
+minimap2 -x asm20 -t 8 -r 100000,100000 /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/seq/assembly/FC76.fa.gz /home/knam/work/sfrugi_WG/GENE_ANNOTATIONS/seq/assembly/FC76.fa.gz | gzip -f > FC76.paf.gz

@@ -1,0 +1,28 @@
+GenomeSize
+
+Readdepth.sh
+	F: Calculating read depth from bam files
+	O: Readdepth/*bed.gz
+	
+Readdepth.CI.pl
+	F: Calculating mean and confidence intervals of the read depth for each sample
+	O: Readdepth/CI.txt
+
+Readdepth.vis.R
+	F: The identification of sex and the visualization from above
+	O: Readdepth.pdf
+	
+Sex.vis.R	
+	F: The visualization of assembly sizes according to the sex
+	O: Sex.pdf
+
+selfalign.minimap2/j*
+	F: executation of minimap2 for self-alignment
+	O: selfalign/paf/*paf.gz
+			
+selfalign.dupl.pl
+	F: identification of self-dupilcated regions
+	O: selfalign/dupl.txt
+
+			
+

@@ -34,6 +34,9 @@ Grouping.DAGChainer.pl
 Grouping.OrthoChr.pl
 	F: Finding orthologus chromosomes from BUSCO genes and testing deviation from conserved chromosome
 	O: Grouping/OrthoChr/BUSCO.orthochrom.*, Grouping/OrthoChr/BUSCO.deviation.*
+Grouping.vis.R
+	F: Visualization of the synthey
+	O: Grouping.pdf
 
 Gene.input.pl
 	F: Extracting chromosomes for each gene
@@ -59,6 +62,26 @@ Gene.all.intronloss.counting.R
 Gene.vis.R
 	F: Visualization of above
 	O: Gene.pdf
+
+IntronLoss.count.pl
+	F: Identication of intronic, introlosing, and sustaintroless genes
+	O: IntronLoss/counting
+
+IntronLoss.counting.R
+	F: Counting the number of intronic, introlosing, and sustaintroless genes with 95% confidence intervals
+	O: IntronLoss/mean
+	
+IntronLoss.vis.R
+	F: Visualization of above
+	O: IntronLoss.pdf	
+
+Examples.examples.pl
+	F: pinpointing examples : intronic in SL and SE, and one SF, intronless in one SF
+	O: Examples/examples.txt
+
+Examples.vis.R
+	F: Visualization of examples
+	O: Examples*.pdf
 	
 
 

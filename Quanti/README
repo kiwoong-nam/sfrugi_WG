@@ -1,0 +1,21 @@
+Quanti
+
+Distal.pl
+	F: Listing iORF-CNV with and without support for interchromosomal duplications for each sample
+	O: Distal/*
+	
+intronN.pl
+	F: Listing intronic or intronless iORF-CNV for each sample
+	O: intron/*
+LINE.pl
+	F: Listing iORF-CNV with a support for LINE-mediated retrotransposition for each sample
+	O: LINE/*
+	
+indicatorN.pl
+	F: Calculation of the proportion of iORF-CNVs with varying # of support for retrotransposition
+	O: indicatorN.txt
+	
+Quanti.vis.R
+	F: Visualization from above
+	O: Quanti.pdf
+

@@ -1,0 +1,5 @@
+iORF_CNV_Coor
+
+coord.pl
+	F: reporting the positions of iORF-CNVs
+	O: coord.txt

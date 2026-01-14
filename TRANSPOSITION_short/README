@@ -1,0 +1,14 @@
+TRANSPOSITION_short
+
+structure.propintronless_short.pl
+	F: Calculating the proportion of intronless genes according to the length bins
+	O: structure/propintronless*.txt
+	
+structure.propintronless_short.stats.R
+	F: Performs fisher's exact test to test if iORF-CNVs have higher proportion of intronless genes than non-iORF-CNVs for each length bin
+	O: structure/propintronless.stats
+
+structure.propintronless_short.vis.R
+	F: visualization from the above
+	O: structure.propintronless.pdf
+		
