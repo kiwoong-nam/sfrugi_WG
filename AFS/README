@@ -1,0 +1,59 @@
+AFS
+
+Flanking.minimap.db.sh
+	F: Generation of an index of the reference genome assembly for mapping
+	O: Flanking/minimap/sfC.ver7.mmi
+
+Flanking.seq.tbl.pl
+	F: Generation of flanking sequences of iORF-CNV and non-CNV genes
+	O: Flanking/seq/tbl/*
+
+Flanking.seq.fasta.pl
+	F: Extracts flanking sequences of iORF-CNV genes
+	O: Flanking/seq/fasta/*.fa
+
+Flanking.minimap.mapping.sh
+	F: performs the mapping of the flanking sequences of iORF-CNV genes against reference genomesa
+	O: Flanking/minimap/mapping/*paf
+
+nonCNV.seq.fasta.pl
+	F: Extracts flanking sequences of non-CNV genes
+	O: nonCNV/seq/fasta/*.fa
+
+nonCNV.minimap.mapping.sh
+	F: performs the mapping of the flanking sequences of non-CNV genes against reference genomesa
+	O: nonCNV/minimap/mapping/*paf
+
+X.nonincl.pl
+	F: Finding genes of which flanking sequences are not observed from the ref genomes and finding genes that are inserted to non-genif reference genomes
+	O: X/nonincl.txt
+X.freq.pl
+	F: Identifies genomic coordinates of the flanking sequences of the iORF-CNVs for each sample
+	O: X/freq/*
+X.merged.sh
+	F: Identifies genomic coordinates of the flanking sequences of the iORF-CNVs from merged data across the samples
+	O: X/merged/*
+
+X.count.sh
+	F: Counts the number of mapped samples for each genomic coordinates of the flanking sequences of the iORF-CNVs
+	O: X/count/*
+
+X.Ufreq.pl
+	F: Identifies genomic coordinates of the flanking sequences of the non-CNVs for each sample
+	O: X/Ufreq/*
+
+X.Umerged.sh
+	F: Identifies genomic coordinates of the flanking sequences of the non-CNVs from merged data across the samples
+	O: X/Umerged/*
+
+X.Ucount.sh
+	F: Counts the number of mapped samples for each genomic coordinates of the flanking sequences of the non-CNVs
+	O: X/Ucount/*
+
+X.group.pl
+	F: Aggregates data forom X/count/* and X/Ucount/* to classify genes based on whether they appear in multiple samples (`multi`).
+	O: X/group.txt
+
+X.fstest.R
+	F: performs statistical test to see the presence of the insertion of iORF-CNVs to non-genic sequences in the reference genomes and the overrepresentation of shared insertional loci in iORF-CNVs compared with non-CNV
+

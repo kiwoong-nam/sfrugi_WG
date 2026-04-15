@@ -1,0 +1,14 @@
+Assembly_Syntheny
+
+minimap/j*
+	F: mapping of each assembly to the reference genome assembly
+	O: minimap/*.paf
+nc.sh
+	F: Change the scaffold names in the paf files
+	O: nc/*paf
+Paf2dotplot.sh
+	F: generation of dot plots from the paf files
+	O: Paf2dotplot/*pdf, Paf2dotplot.pdf
+
+
+

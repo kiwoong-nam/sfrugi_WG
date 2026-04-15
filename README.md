@@ -52,3 +52,9 @@ iORF_CNV_Coord
 Quanti
   Quantification of iORF-CNVs with support for retrotransposition
 
+AFS
+  Calculation of shared iORF-CNVs
+  
+Assembly_Syntheny/
+  Testing the syntheny between the assemblies and the reference genome
+ 
