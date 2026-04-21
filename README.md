@@ -5,57 +5,57 @@ authored by Kiwoong Nam, Sylvie Gimenez, Hyerin An, Karine Durand, Melanie Gasse
 
 The scripts are grouped into the following directories, reflecting the original working environments:
 
-Assembling:
+* Assembling:
  For the generation of individually assembled genomes.
 
-RefSeq:
+* RefSeq:
   Treatment of RefSeq data
   
-GENE_ANNOTATIONS:
+* GENE_ANNOTATIONS:
  Gene annotation for each genome assembly.
 
-SNV:
+* SNV:
  Identification of single nucleotide variations.
 
-CNV_Gene:
+* CNV_Gene:
  Identification of iORF-CNVs.
 
-Ver7:
+* Ver7:
  Comparison of read depths between iORF-CNVs and other genes.
 
-ABUNDANCE:
+* ABUNDANCE:
  Calculation of the abundance of iORF-CNVs and SNVs.
 
-POSITION:
+* POSITION:
  Analysis of the genomic positions of iORF-CNV genes.
 
-TRANSPOSITION:
+* TRANSPOSITION:
  Testing retrotransposition as a potential origin of iORF-CNVs.
 
-MALADAPTATION:
+* MALADAPTATION:
  Investigation of selective forces acting on iORF-CNV copies.
 
-TRANSCRIPTION:
+* TRANSCRIPTION:
  Analysis of transcriptional mechanisms of iORF-CNVs.
 
-SYNTHENY:
+* SYNTHENY:
  Testing the conservation of synteny in potential iORF-CNVs.
 
-TRANSPOSITION_short
+* TRANSPOSITION_short
   Testing if iORF-CNVs have higher proportion of intronless genes than non-iORF-CNVs for each length bin
 
-GenomeSize
+* GenomeSize
   Comparision of assembly sizes according to the sex
 
-iORF_CNV_Coord
+* iORF_CNV_Coord
   listing iORF-CNVs
     
-Quanti
+* Quanti
   Quantification of iORF-CNVs with support for retrotransposition
 
-AFS
+* AFS
   Calculation of shared iORF-CNVs
   
-Assembly_Syntheny/
+* Assembly_Syntheny
   Testing the syntheny between the assemblies and the reference genome
  
