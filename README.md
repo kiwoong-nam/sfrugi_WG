@@ -41,21 +41,21 @@ The scripts are grouped into the following directories, reflecting the original 
 * SYNTHENY:
  Testing the conservation of synteny in potential iORF-CNVs.
 
-* TRANSPOSITION_short
+* TRANSPOSITION_short:
   Testing if iORF-CNVs have higher proportion of intronless genes than non-iORF-CNVs for each length bin
 
-* GenomeSize
+* GenomeSize:
   Comparision of assembly sizes according to the sex
 
-* iORF_CNV_Coord
+* iORF_CNV_Coord:
   listing iORF-CNVs
     
-* Quanti
+* Quanti:
   Quantification of iORF-CNVs with support for retrotransposition
 
-* AFS
+* AFS:
   Calculation of shared iORF-CNVs
   
-* Assembly_Syntheny
+* Assembly_Syntheny:
   Testing the syntheny between the assemblies and the reference genome
  
