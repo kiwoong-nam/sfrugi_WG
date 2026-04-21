@@ -1,8 +1,9 @@
 # sfrugi_WG
- A study on copy number variations with intact open reading frames using individually assembled genomes
-<<<<<<< Updated upstream
+These scripts was used in a paper of 'Retrotransposed gene copies persist under relaxed selection in wild Spodoptera frugiperda'
 
-The scripts used in this study are grouped into the following directories, reflecting the original working environments:
+authored by Kiwoong Nam, Sylvie Gimenez, Hyerin An, Karine Durand, Melanie Gasser, Sudeeptha Yainna, Fabrice Legeai, Julien Beuzelin, David G. Heckel, Sabine Hänniger, Emmanuelle d'Alençon
+
+The scripts are grouped into the following directories, reflecting the original working environments:
 
 Assembling:
  For the generation of individually assembled genomes.
