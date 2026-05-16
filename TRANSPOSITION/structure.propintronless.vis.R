@@ -19,7 +19,7 @@ p = ggplot(vm, aes(x =Type, y = m, group = sample)) +
                 position = j_pos, width = 0.01, alpha = 0.3) +
   geom_point(aes(color = Type), position = j_pos, size = .8) +
   scale_color_manual(values = c("iORF-CNV" = "red", "non-CNV" = "blue")) +
-  ylab("The number of introns per gene") +
+  ylab("Proportion of intronless genes")+
   xlab("") +
   scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.1)))+
   theme_bw() +
